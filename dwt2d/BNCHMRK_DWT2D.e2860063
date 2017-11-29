@@ -1,0 +1,303 @@
+
+cuda/8.0 : CUDA compiler and related CUDA programs
+
+
+cudnn/6.0 : Deep neural network library for cuda 7.5 or greater
+
+==6780== NVPROF is profiling process 6780, command: ./dwt2d 192.bmp -d 192x192 -f -5 -l 3
+==6780== Warning: Unified Memory Profiling is not supported on devices of compute capability less than 3.0
+==6780== Profiling application: ./dwt2d 192.bmp -d 192x192 -f -5 -l 3
+==6780== Profiling result:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 35.62%  83.871us         3  27.957us  27.200us  29.407us  [CUDA memcpy DtoH]
+ 29.41%  69.242us         9  7.6930us  5.8990us  12.453us  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int)
+ 14.42%  33.951us         8  4.2430us  3.8720us  6.3360us  [CUDA memset]
+  9.55%  22.496us         1  22.496us  22.496us  22.496us  [CUDA memcpy HtoD]
+  8.25%  19.423us         9  2.1580us  1.2990us  4.2620us  [CUDA memcpy DtoD]
+  2.75%  6.4770us         1  6.4770us  6.4770us  6.4770us  void c_CopySrcToComponents<int>(int*, int*, int*, unsigned char*, int)
+
+==6780== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 95.86%  154.10ms         4  38.526ms  10.004us  154.07ms  cudaMallocHost
+  1.79%  2.8744ms       364  7.8960us     180ns  323.80us  cuDeviceGetAttribute
+  0.45%  727.57us         1  727.57us  727.57us  727.57us  cudaGetDeviceProperties
+  0.38%  605.23us         4  151.31us  146.15us  158.35us  cuDeviceTotalMem
+  0.32%  513.08us         8  64.134us  6.0080us  245.36us  cudaMalloc
+  0.29%  463.81us         4  115.95us  18.856us  389.84us  cudaFreeHost
+  0.28%  453.08us         8  56.635us  3.5280us  214.54us  cudaFree
+  0.25%  397.51us        13  30.577us  14.224us  63.054us  cudaMemcpy
+  0.18%  286.42us         4  71.604us  65.119us  87.529us  cuDeviceGetName
+  0.07%  119.54us        10  11.954us  9.9680us  21.878us  cudaLaunch
+  0.07%  109.52us         8  13.690us  9.0040us  33.181us  cudaMemset
+  0.02%  29.270us         3  9.7560us  7.0090us  11.571us  cudaThreadSynchronize
+  0.02%  28.047us        42     667ns     303ns  7.0750us  cudaGetLastError
+  0.01%  14.411us        50     288ns     220ns     783ns  cudaSetupArgument
+  0.00%  7.6340us         1  7.6340us  7.6340us  7.6340us  cudaSetDevice
+  0.00%  6.2580us        12     521ns     188ns  1.3890us  cuDeviceGet
+  0.00%  5.9840us        10     598ns     376ns  1.2620us  cudaConfigureCall
+  0.00%  3.8900us         3  1.2960us     375ns  2.7120us  cuDeviceGetCount
+  0.00%  2.4710us         1  2.4710us  2.4710us  2.4710us  cudaGetDeviceCount
+==6800== NVPROF is profiling process 6800, command: ./dwt2d 192.bmp -d 192x192 -f -5 -l 3
+==6800== Warning: Unified Memory Profiling is not supported on devices of compute capability less than 3.0
+==6800== Profiling application: ./dwt2d 192.bmp -d 192x192 -f -5 -l 3
+==6800== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput           Device   Context    Stream  Name
+293.77ms  6.3030us                    -               -         -         -         -  144.00KB  21.788GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+293.80ms  3.9040us                    -               -         -         -         -  144.00KB  35.177GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+293.81ms  3.9040us                    -               -         -         -         -  144.00KB  35.177GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+293.83ms  3.8720us                    -               -         -         -         -  144.00KB  35.467GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+293.86ms  3.9040us                    -               -         -         -         -  144.00KB  35.177GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+293.87ms  3.9040us                    -               -         -         -         -  144.00KB  35.177GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+293.89ms  3.8720us                    -               -         -         -         -  144.00KB  35.467GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+294.14ms  4.1920us                    -               -         -         -         -  108.00KB  24.570GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+294.17ms  22.431us                    -               -         -         -         -  108.00KB  4.5917GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+294.23ms  6.6570us            (144 1 1)       (256 1 1)        11      768B        0B         -           -  Tesla M2090 (0)         1         7  void c_CopySrcToComponents<int>(int*, int*, int*, unsigned char*, int) [436]
+294.49ms  4.0320us                    -               -         -         -         -  144.00KB  34.060GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+294.51ms  12.382us             (3 12 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [450]
+294.52ms  1.3550us                    -               -         -         -         -  36.000KB  25.337GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+294.53ms  6.0350us             (2 12 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [458]
+294.55ms  1.0840us                    -               -         -         -         -  9.0000KB  7.9180GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+294.56ms  6.0190us              (1 6 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [466]
+294.58ms  3.0770us                    -               -         -         -         -  144.00KB  44.631GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+294.60ms  10.041us             (3 12 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [475]
+294.61ms  1.1880us                    -               -         -         -         -  36.000KB  28.899GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+294.63ms  6.0810us             (2 12 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [483]
+294.64ms  1.0900us                    -               -         -         -         -  9.0000KB  7.8744GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+294.65ms  6.0380us              (1 6 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [491]
+294.67ms  3.5980us                    -               -         -         -         -  144.00KB  38.168GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+294.68ms  10.062us             (3 12 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [500]
+294.69ms  1.2210us                    -               -         -         -         -  36.000KB  28.118GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+294.71ms  6.1270us             (2 12 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [508]
+294.72ms  1.0940us                    -               -         -         -         -  9.0000KB  7.8456GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+294.73ms  6.0480us              (1 6 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [516]
+294.78ms  29.280us                    -               -         -         -         -  144.00KB  4.6902GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+296.70ms  28.928us                    -               -         -         -         -  144.00KB  4.7473GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+298.36ms  27.168us                    -               -         -         -         -  144.00KB  5.0548GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+==6868== NVPROF is profiling process 6868, command: ./dwt2d rgb.bmp -d 1024x1024 -f -5 -l 3
+==6868== Warning: Unified Memory Profiling is not supported on devices of compute capability less than 3.0
+==6868== Profiling application: ./dwt2d rgb.bmp -d 1024x1024 -f -5 -l 3
+==6868== Profiling result:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 54.59%  2.2673ms         3  755.77us  707.09us  842.42us  [CUDA memcpy DtoH]
+ 12.67%  526.17us         1  526.17us  526.17us  526.17us  [CUDA memcpy HtoD]
+ 10.14%  421.34us         8  52.667us  41.151us  55.359us  [CUDA memset]
+  9.00%  373.75us         3  124.58us  120.82us  129.51us  void dwt_cuda::fdwt53Kernel<int=192, int=8>(int const *, int*, int, int, int)
+  6.63%  275.25us         9  30.583us  6.7760us  68.152us  [CUDA memcpy DtoD]
+  3.20%  132.81us         1  132.81us  132.81us  132.81us  void c_CopySrcToComponents<int>(int*, int*, int*, unsigned char*, int)
+  2.63%  109.15us         3  36.382us  35.070us  37.644us  void dwt_cuda::fdwt53Kernel<int=128, int=8>(int const *, int*, int, int, int)
+  1.14%  47.518us         3  15.839us  15.702us  15.914us  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int)
+
+==6868== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 91.21%  155.48ms         4  38.870ms  1.5681ms  150.20ms  cudaMallocHost
+  2.03%  3.4538ms         4  863.44us  775.76us  915.68us  cudaFreeHost
+  1.84%  3.1330ms        13  241.00us  12.902us  882.34us  cudaMemcpy
+  1.68%  2.8636ms       364  7.8660us     188ns  323.39us  cuDeviceGetAttribute
+  1.06%  1.8145ms         8  226.81us  216.43us  269.24us  cudaMalloc
+  0.91%  1.5579ms         8  194.74us  183.84us  209.20us  cudaFree
+  0.43%  728.38us         1  728.38us  728.38us  728.38us  cudaGetDeviceProperties
+  0.36%  612.44us         4  153.11us  150.43us  160.52us  cuDeviceTotalMem
+  0.17%  295.02us         4  73.756us  64.778us  91.617us  cuDeviceGetName
+  0.10%  174.28us         8  21.784us  17.246us  46.406us  cudaMemset
+  0.09%  158.76us         3  52.919us  6.4010us  139.23us  cudaThreadSynchronize
+  0.07%  115.99us        10  11.598us  9.1580us  24.243us  cudaLaunch
+  0.02%  32.210us        42     766ns     373ns  6.9690us  cudaGetLastError
+  0.01%  12.398us        50     247ns     195ns     750ns  cudaSetupArgument
+  0.00%  8.2690us        10     826ns     350ns  3.9540us  cudaConfigureCall
+  0.00%  8.0090us         1  8.0090us  8.0090us  8.0090us  cudaSetDevice
+  0.00%  5.8670us        12     488ns     196ns  1.1930us  cuDeviceGet
+  0.00%  3.8780us         3  1.2920us     397ns  2.7450us  cuDeviceGetCount
+  0.00%  2.6940us         1  2.6940us  2.6940us  2.6940us  cudaGetDeviceCount
+==6895== NVPROF is profiling process 6895, command: ./dwt2d rgb.bmp -d 1024x1024 -f -5 -l 3
+==6895== Warning: Unified Memory Profiling is not supported on devices of compute capability less than 3.0
+==6895== Profiling application: ./dwt2d rgb.bmp -d 1024x1024 -f -5 -l 3
+==6895== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput           Device   Context    Stream  Name
+293.34ms  55.839us                    -               -         -         -         -  4.0000MB  69.956GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+293.61ms  54.399us                    -               -         -         -         -  4.0000MB  71.807GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+293.86ms  54.303us                    -               -         -         -         -  4.0000MB  71.934GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+294.11ms  53.887us                    -               -         -         -         -  4.0000MB  72.490GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+294.37ms  54.431us                    -               -         -         -         -  4.0000MB  71.765GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+294.63ms  54.271us                    -               -         -         -         -  4.0000MB  71.977GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+294.88ms  54.208us                    -               -         -         -         -  4.0000MB  72.060GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+295.15ms  41.567us                    -               -         -         -         -  3.0000MB  70.481GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+295.19ms  525.24us                    -               -         -         -         -  3.0000MB  5.5778GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+295.77ms  132.37us           (4096 1 1)       (256 1 1)        11      768B        0B         -           -  Tesla M2090 (0)         1         7  void c_CopySrcToComponents<int>(int*, int*, int*, unsigned char*, int) [436]
+296.17ms  68.003us                    -               -         -         -         -  4.0000MB  57.442GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+296.24ms  123.04us             (6 15 1)       (192 1 1)        34  8.5234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=192, int=8>(int const *, int*, int, int, int) [450]
+296.36ms  17.102us                    -               -         -         -         -  1.0000MB  57.102GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+296.38ms  37.328us             (4 13 1)       (128 1 1)        32  5.7734KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=128, int=8>(int const *, int*, int, int, int) [458]
+296.42ms  6.4790us                    -               -         -         -         -  256.00KB  37.682GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+296.43ms  15.937us             (4 11 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [466]
+296.45ms  67.929us                    -               -         -         -         -  4.0000MB  57.505GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+296.51ms  126.13us             (6 15 1)       (192 1 1)        34  8.5234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=192, int=8>(int const *, int*, int, int, int) [475]
+296.64ms  16.712us                    -               -         -         -         -  1.0000MB  58.435GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+296.66ms  36.629us             (4 13 1)       (128 1 1)        32  5.7734KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=128, int=8>(int const *, int*, int, int, int) [483]
+296.70ms  6.8300us                    -               -         -         -         -  256.00KB  35.745GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+296.71ms  15.754us             (4 11 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [491]
+296.72ms  67.381us                    -               -         -         -         -  4.0000MB  57.973GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+296.79ms  129.56us             (6 15 1)       (192 1 1)        34  8.5234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=192, int=8>(int const *, int*, int, int, int) [500]
+296.92ms  18.034us                    -               -         -         -         -  1.0000MB  54.151GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+296.94ms  36.243us             (4 13 1)       (128 1 1)        32  5.7734KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=128, int=8>(int const *, int*, int, int, int) [508]
+296.98ms  7.0790us                    -               -         -         -         -  256.00KB  34.488GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+296.99ms  15.801us             (4 11 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [516]
+299.63ms  707.92us                    -               -         -         -         -  4.0000MB  5.5179GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+322.40ms  718.29us                    -               -         -         -         -  4.0000MB  5.4382GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+341.56ms  716.08us                    -               -         -         -         -  4.0000MB  5.4550GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+==6936== NVPROF is profiling process 6936, command: ./dwt2d 192.bmp -d 192x192 -f -5 -l 3
+==6936== Warning: Unified Memory Profiling is not supported on devices of compute capability less than 3.0
+==6936== Profiling application: ./dwt2d 192.bmp -d 192x192 -f -5 -l 3
+==6936== Profiling result:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 35.69%  83.680us         3  27.893us  27.136us  29.376us  [CUDA memcpy DtoH]
+ 29.23%  68.532us         9  7.6140us  5.9480us  12.330us  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int)
+ 14.58%  34.175us         8  4.2710us  3.8710us  6.3360us  [CUDA memset]
+  9.62%  22.560us         1  22.560us  22.560us  22.560us  [CUDA memcpy HtoD]
+  8.14%  19.077us         9  2.1190us  1.0910us  4.0540us  [CUDA memcpy DtoD]
+  2.75%  6.4410us         1  6.4410us  6.4410us  6.4410us  void c_CopySrcToComponents<int>(int*, int*, int*, unsigned char*, int)
+
+==6936== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 95.54%  144.34ms         4  36.085ms  11.553us  144.30ms  cudaMallocHost
+  1.96%  2.9537ms       364  8.1140us     191ns  333.93us  cuDeviceGetAttribute
+  0.48%  723.21us         1  723.21us  723.21us  723.21us  cudaGetDeviceProperties
+  0.43%  651.11us         4  162.78us  149.23us  175.41us  cuDeviceTotalMem
+  0.33%  501.30us         8  62.661us  5.8800us  237.22us  cudaMalloc
+  0.32%  490.94us         8  61.367us  3.8080us  222.93us  cudaFree
+  0.30%  458.53us         4  114.63us  20.502us  383.80us  cudaFreeHost
+  0.24%  364.70us        13  28.053us  11.976us  63.262us  cudaMemcpy
+  0.19%  293.66us         4  73.415us  67.958us  87.971us  cuDeviceGetName
+  0.07%  106.57us         8  13.321us  8.9130us  32.594us  cudaMemset
+  0.07%  102.58us        10  10.257us  8.6170us  19.686us  cudaLaunch
+  0.02%  29.150us         3  9.7160us  6.5170us  12.076us  cudaThreadSynchronize
+  0.02%  27.254us        42     648ns     271ns  7.1400us  cudaGetLastError
+  0.01%  12.314us        50     246ns     186ns     885ns  cudaSetupArgument
+  0.01%  7.9700us         1  7.9700us  7.9700us  7.9700us  cudaSetDevice
+  0.00%  5.6630us        12     471ns     197ns  1.2150us  cuDeviceGet
+  0.00%  5.5000us        10     550ns     355ns  1.1140us  cudaConfigureCall
+  0.00%  3.9310us         3  1.3100us     397ns  2.7500us  cuDeviceGetCount
+  0.00%  2.4170us         1  2.4170us  2.4170us  2.4170us  cudaGetDeviceCount
+==6965== NVPROF is profiling process 6965, command: ./dwt2d 192.bmp -d 192x192 -f -5 -l 3
+==6965== Warning: Unified Memory Profiling is not supported on devices of compute capability less than 3.0
+==6965== Profiling application: ./dwt2d 192.bmp -d 192x192 -f -5 -l 3
+==6965== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput           Device   Context    Stream  Name
+283.36ms  6.3040us                    -               -         -         -         -  144.00KB  21.784GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+283.38ms  3.9360us                    -               -         -         -         -  144.00KB  34.891GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+283.40ms  3.9040us                    -               -         -         -         -  144.00KB  35.177GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+283.41ms  3.9360us                    -               -         -         -         -  144.00KB  34.891GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+283.43ms  3.8720us                    -               -         -         -         -  144.00KB  35.467GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+283.45ms  3.9040us                    -               -         -         -         -  144.00KB  35.177GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+283.47ms  3.9040us                    -               -         -         -         -  144.00KB  35.177GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+283.72ms  4.1920us                    -               -         -         -         -  108.00KB  24.570GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+283.75ms  22.560us                    -               -         -         -         -  108.00KB  4.5655GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+283.81ms  6.3960us            (144 1 1)       (256 1 1)        11      768B        0B         -           -  Tesla M2090 (0)         1         7  void c_CopySrcToComponents<int>(int*, int*, int*, unsigned char*, int) [436]
+284.07ms  4.1030us                    -               -         -         -         -  144.00KB  33.470GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+284.09ms  12.404us             (3 12 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [450]
+284.10ms  1.2590us                    -               -         -         -         -  36.000KB  27.269GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+284.12ms  5.9070us             (2 12 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [458]
+284.13ms  1.2980us                    -               -         -         -         -  9.0000KB  6.6125GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+284.14ms  6.1690us              (1 6 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [466]
+284.16ms  3.2530us                    -               -         -         -         -  144.00KB  42.216GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+284.17ms  10.317us             (3 12 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [475]
+284.18ms  1.1520us                    -               -         -         -         -  36.000KB  29.802GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+284.20ms  5.9010us             (2 12 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [483]
+284.21ms  1.2920us                    -               -         -         -         -  9.0000KB  6.6432GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+284.22ms  6.1510us              (1 6 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [491]
+284.23ms  4.3290us                    -               -         -         -         -  144.00KB  31.723GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+284.25ms  10.284us             (3 12 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [500]
+284.26ms  1.1440us                    -               -         -         -         -  36.000KB  30.011GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+284.27ms  5.9240us             (2 12 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [508]
+284.29ms  1.2950us                    -               -         -         -         -  9.0000KB  6.6279GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+284.30ms  6.1730us              (1 6 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [516]
+284.35ms  29.216us                    -               -         -         -         -  144.00KB  4.7005GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+288.23ms  31.104us                    -               -         -         -         -  144.00KB  4.4152GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+290.30ms  29.472us                    -               -         -         -         -  144.00KB  4.6596GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+==6996== NVPROF is profiling process 6996, command: ./dwt2d rgb.bmp -d 1024x1024 -f -5 -l 3
+==6996== Warning: Unified Memory Profiling is not supported on devices of compute capability less than 3.0
+==6996== Profiling application: ./dwt2d rgb.bmp -d 1024x1024 -f -5 -l 3
+==6996== Profiling result:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 53.01%  2.1355ms         3  711.82us  707.80us  718.93us  [CUDA memcpy DtoH]
+ 12.99%  523.35us         1  523.35us  523.35us  523.35us  [CUDA memcpy HtoD]
+ 10.53%  424.06us         8  53.007us  41.407us  56.735us  [CUDA memset]
+  9.43%  379.95us         3  126.65us  123.25us  129.45us  void dwt_cuda::fdwt53Kernel<int=192, int=8>(int const *, int*, int, int, int)
+  6.84%  275.45us         9  30.605us  6.7470us  67.809us  [CUDA memcpy DtoD]
+  3.31%  133.47us         1  133.47us  133.47us  133.47us  void c_CopySrcToComponents<int>(int*, int*, int*, unsigned char*, int)
+  2.70%  108.83us         3  36.276us  36.083us  36.397us  void dwt_cuda::fdwt53Kernel<int=128, int=8>(int const *, int*, int, int, int)
+  1.18%  47.664us         3  15.888us  15.736us  16.022us  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int)
+
+==6996== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 91.10%  151.99ms         4  37.997ms  1.6569ms  146.59ms  cudaMallocHost
+  2.04%  3.3983ms         4  849.57us  742.97us  910.48us  cudaFreeHost
+  1.78%  2.9755ms        13  228.88us  12.179us  784.34us  cudaMemcpy
+  1.75%  2.9192ms       364  8.0190us     190ns  335.38us  cuDeviceGetAttribute
+  1.08%  1.7993ms         8  224.92us  210.75us  263.60us  cudaMalloc
+  0.96%  1.5980ms         8  199.75us  187.68us  232.94us  cudaFree
+  0.43%  725.14us         1  725.14us  725.14us  725.14us  cudaGetDeviceProperties
+  0.37%  611.07us         4  152.77us  150.68us  155.04us  cuDeviceTotalMem
+  0.17%  291.11us         4  72.778us  65.834us  88.952us  cuDeviceGetName
+  0.10%  170.09us         8  21.260us  17.539us  42.901us  cudaMemset
+  0.10%  169.93us         3  56.644us  6.3970us  150.71us  cudaThreadSynchronize
+  0.07%  111.22us        10  11.122us  8.9750us  23.094us  cudaLaunch
+  0.02%  38.763us        42     922ns     381ns  7.7270us  cudaGetLastError
+  0.01%  13.083us        50     261ns     186ns     964ns  cudaSetupArgument
+  0.00%  7.9570us         1  7.9570us  7.9570us  7.9570us  cudaSetDevice
+  0.00%  6.0710us        12     505ns     195ns  1.1500us  cuDeviceGet
+  0.00%  5.2450us        10     524ns     343ns  1.0850us  cudaConfigureCall
+  0.00%  3.8810us         3  1.2930us     277ns  2.8280us  cuDeviceGetCount
+  0.00%  2.6220us         1  2.6220us  2.6220us  2.6220us  cudaGetDeviceCount
+==7014== NVPROF is profiling process 7014, command: ./dwt2d rgb.bmp -d 1024x1024 -f -5 -l 3
+==7014== Warning: Unified Memory Profiling is not supported on devices of compute capability less than 3.0
+==7014== Profiling application: ./dwt2d rgb.bmp -d 1024x1024 -f -5 -l 3
+==7014== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput           Device   Context    Stream  Name
+286.25ms  55.263us                    -               -         -         -         -  4.0000MB  70.685GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+286.51ms  54.527us                    -               -         -         -         -  4.0000MB  71.639GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+286.77ms  54.239us                    -               -         -         -         -  4.0000MB  72.019GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+287.00ms  54.303us                    -               -         -         -         -  4.0000MB  71.934GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+287.24ms  54.239us                    -               -         -         -         -  4.0000MB  72.019GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+287.49ms  54.303us                    -               -         -         -         -  4.0000MB  71.934GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+287.73ms  54.399us                    -               -         -         -         -  4.0000MB  71.807GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+287.98ms  41.311us                    -               -         -         -         -  3.0000MB  70.918GB/s  Tesla M2090 (0)         1         7  [CUDA memset]
+288.03ms  525.53us                    -               -         -         -         -  3.0000MB  5.5748GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+288.61ms  132.54us           (4096 1 1)       (256 1 1)        11      768B        0B         -           -  Tesla M2090 (0)         1         7  void c_CopySrcToComponents<int>(int*, int*, int*, unsigned char*, int) [436]
+289.00ms  67.611us                    -               -         -         -         -  4.0000MB  57.775GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+289.07ms  127.40us             (6 15 1)       (192 1 1)        34  8.5234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=192, int=8>(int const *, int*, int, int, int) [450]
+289.19ms  17.541us                    -               -         -         -         -  1.0000MB  55.673GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+289.21ms  38.502us             (4 13 1)       (128 1 1)        32  5.7734KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=128, int=8>(int const *, int*, int, int, int) [458]
+289.25ms  6.6740us                    -               -         -         -         -  256.00KB  36.581GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+289.26ms  15.975us             (4 11 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [466]
+289.28ms  67.221us                    -               -         -         -         -  4.0000MB  58.111GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+289.35ms  126.45us             (6 15 1)       (192 1 1)        34  8.5234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=192, int=8>(int const *, int*, int, int, int) [475]
+289.48ms  17.996us                    -               -         -         -         -  1.0000MB  54.266GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+289.50ms  36.494us             (4 13 1)       (128 1 1)        32  5.7734KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=128, int=8>(int const *, int*, int, int, int) [483]
+289.53ms  6.8540us                    -               -         -         -         -  256.00KB  35.620GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+289.54ms  15.769us             (4 11 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [491]
+289.56ms  67.697us                    -               -         -         -         -  4.0000MB  57.702GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+289.63ms  128.10us             (6 15 1)       (192 1 1)        34  8.5234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=192, int=8>(int const *, int*, int, int, int) [500]
+289.76ms  17.852us                    -               -         -         -         -  1.0000MB  54.703GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+289.78ms  36.380us             (4 13 1)       (128 1 1)        32  5.7734KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=128, int=8>(int const *, int*, int, int, int) [508]
+289.82ms  6.9270us                    -               -         -         -         -  256.00KB  35.245GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoD]
+289.82ms  15.796us             (4 11 1)        (64 1 1)        50  3.0234KB        0B         -           -  Tesla M2090 (0)         1         7  void dwt_cuda::fdwt53Kernel<int=64, int=8>(int const *, int*, int, int, int) [516]
+292.02ms  707.45us                    -               -         -         -         -  4.0000MB  5.5216GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+311.10ms  707.73us                    -               -         -         -         -  4.0000MB  5.5194GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+330.13ms  708.15us                    -               -         -         -         -  4.0000MB  5.5161GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+/var/spool/sge/compute-1-14/job_scripts/2860063: line 27: /data/users/zhizhonk: is a directory
