@@ -1,0 +1,7 @@
+
+cuda/8.0 : CUDA compiler and related CUDA programs
+
+
+cudnn/6.0 : Deep neural network library for cuda 7.5 or greater
+
+./run: line 4: ./hybridsort: No such file or directory
