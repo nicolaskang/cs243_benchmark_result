@@ -1,0 +1,146 @@
+
+cuda/8.0 : CUDA compiler and related CUDA programs
+
+
+cudnn/6.0 : Deep neural network library for cuda 7.5 or greater
+
+==10680== NVPROF is profiling process 10680, command: ./gaussian -s 16
+==10680== Warning: Unified Memory Profiling is not supported on devices of compute capability less than 3.0
+==10680== Profiling application: ./gaussian -s 16
+==10680== Profiling result:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 40.95%  28.164us        15  1.8770us  1.7510us  2.5130us  Fan1(float*, float*, int, int)
+ 35.55%  24.446us        15  1.6290us  1.5350us  1.8720us  Fan2(float*, float*, float*, int, int, int)
+ 16.38%  11.263us         3  3.7540us  3.7120us  3.7760us  [CUDA memcpy DtoH]
+  7.12%  4.8960us         3  1.6320us  1.5680us  1.7600us  [CUDA memcpy HtoD]
+
+==10680== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 96.72%  145.06ms         3  48.352ms  6.9720us  145.04ms  cudaMalloc
+  1.99%  2.9772ms       364  8.1790us     210ns  341.39us  cuDeviceGetAttribute
+  0.42%  635.08us         4  158.77us  156.52us  161.04us  cuDeviceTotalMem
+  0.21%  315.09us        30  10.502us  9.2070us  31.700us  cudaLaunch
+  0.20%  295.11us         4  73.778us  67.183us  90.111us  cuDeviceGetName
+  0.17%  249.12us        30  8.3030us  7.8700us  12.998us  cudaThreadSynchronize
+  0.15%  229.41us         3  76.469us  7.6410us  213.35us  cudaFree
+  0.09%  137.68us         6  22.946us  11.248us  32.693us  cudaMemcpy
+  0.03%  43.776us       150     291ns     223ns  5.1930us  cudaSetupArgument
+  0.01%  14.954us        30     498ns     338ns  3.2610us  cudaConfigureCall
+  0.01%  7.5650us        15     504ns     358ns  2.1950us  cudaGetLastError
+  0.00%  6.4300us        12     535ns     220ns  1.4480us  cuDeviceGet
+  0.00%  4.0000us         3  1.3330us     317ns  2.8450us  cuDeviceGetCount
+==10698== NVPROF is profiling process 10698, command: ./gaussian -s 16
+==10698== Warning: Unified Memory Profiling is not supported on devices of compute capability less than 3.0
+==10698== Profiling application: ./gaussian -s 16
+==10698== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput           Device   Context    Stream  Name
+287.14ms  1.7600us                    -               -         -         -         -  1.0000KB  554.87MB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+287.16ms  1.5680us                    -               -         -         -         -  1.0000KB  622.81MB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+287.17ms  1.5680us                    -               -         -         -         -       64B  38.925MB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+287.23ms  2.5090us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [399]
+287.26ms  1.8660us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [408]
+287.28ms  1.8980us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [416]
+287.31ms  1.6060us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [425]
+287.33ms  1.8950us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [433]
+287.35ms  1.6500us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [442]
+287.37ms  1.8740us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [450]
+287.40ms  1.5980us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [459]
+287.42ms  1.8800us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [467]
+287.44ms  1.6490us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [476]
+287.46ms  1.8550us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [484]
+287.49ms  1.6030us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [493]
+287.51ms  1.8520us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [501]
+287.53ms  1.6460us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [510]
+287.55ms  1.8340us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [518]
+287.57ms  1.5940us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [527]
+287.60ms  1.8240us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [535]
+287.62ms  1.6590us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [544]
+287.64ms  1.8160us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [552]
+287.66ms  1.5970us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [561]
+287.69ms  1.8090us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [569]
+287.71ms  1.6530us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [578]
+287.73ms  1.7910us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [586]
+287.75ms  1.5940us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [595]
+287.77ms  1.7740us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [603]
+287.80ms  1.6030us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [612]
+287.82ms  1.7630us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [620]
+287.84ms  1.5580us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [629]
+287.86ms  1.7450us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [637]
+287.89ms  1.5390us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [646]
+287.92ms  3.7750us                    -               -         -         -         -  1.0000KB  258.69MB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+287.94ms  3.7760us                    -               -         -         -         -  1.0000KB  258.62MB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+287.97ms  3.7120us                    -               -         -         -         -       64B  16.443MB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+==10773== NVPROF is profiling process 10773, command: ./gaussian -s 16
+==10773== Warning: Unified Memory Profiling is not supported on devices of compute capability less than 3.0
+==10773== Profiling application: ./gaussian -s 16
+==10773== Profiling result:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 40.98%  28.148us        15  1.8760us  1.7480us  2.5060us  Fan1(float*, float*, int, int)
+ 35.58%  24.438us        15  1.6290us  1.5320us  1.8610us  Fan2(float*, float*, float*, int, int, int)
+ 16.40%  11.264us         3  3.7540us  3.7120us  3.7760us  [CUDA memcpy DtoH]
+  7.04%  4.8320us         3  1.6100us  1.5360us  1.7280us  [CUDA memcpy HtoD]
+
+==10773== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 96.62%  135.61ms         3  45.203ms  5.9790us  135.59ms  cudaMalloc
+  2.07%  2.9089ms       364  7.9910us     188ns  330.30us  cuDeviceGetAttribute
+  0.44%  615.14us         4  153.79us  147.22us  167.32us  cuDeviceTotalMem
+  0.20%  283.88us         4  70.970us  64.700us  86.067us  cuDeviceGetName
+  0.19%  272.32us        30  9.0770us  7.8580us  29.103us  cudaLaunch
+  0.18%  246.07us        30  8.2020us  7.9590us  8.5980us  cudaThreadSynchronize
+  0.15%  213.52us         3  71.172us  6.5690us  199.38us  cudaFree
+  0.10%  135.97us         6  22.661us  11.565us  30.673us  cudaMemcpy
+  0.03%  43.052us       150     287ns     228ns  4.6770us  cudaSetupArgument
+  0.01%  13.218us        30     440ns     299ns  3.1910us  cudaConfigureCall
+  0.00%  6.7680us        15     451ns     337ns  1.9840us  cudaGetLastError
+  0.00%  6.0030us        12     500ns     198ns  1.3070us  cuDeviceGet
+  0.00%  3.8240us         3  1.2740us     273ns  2.7530us  cuDeviceGetCount
+==10791== NVPROF is profiling process 10791, command: ./gaussian -s 16
+==10791== Warning: Unified Memory Profiling is not supported on devices of compute capability less than 3.0
+==10791== Profiling application: ./gaussian -s 16
+==10791== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput           Device   Context    Stream  Name
+279.42ms  1.7600us                    -               -         -         -         -  1.0000KB  554.87MB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+279.43ms  1.5680us                    -               -         -         -         -  1.0000KB  622.81MB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+279.44ms  1.5680us                    -               -         -         -         -       64B  38.925MB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+279.49ms  2.5100us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [399]
+279.51ms  1.8750us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [408]
+279.54ms  1.8980us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [416]
+279.56ms  1.6000us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [425]
+279.58ms  1.9010us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [433]
+279.60ms  1.6560us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [442]
+279.62ms  1.8730us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [450]
+279.64ms  1.6040us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [459]
+279.66ms  1.8890us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [467]
+279.68ms  1.6530us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [476]
+279.70ms  1.8550us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [484]
+279.72ms  1.5970us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [493]
+279.74ms  1.8610us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [501]
+279.76ms  1.6530us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [510]
+279.77ms  1.8430us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [518]
+279.79ms  1.5970us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [527]
+279.81ms  1.8310us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [535]
+279.83ms  1.6490us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [544]
+279.85ms  1.8060us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [552]
+279.87ms  1.6030us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [561]
+279.89ms  1.8090us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [569]
+279.91ms  1.6740us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [578]
+279.93ms  1.7760us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [586]
+279.96ms  1.5940us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [595]
+279.98ms  1.7810us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [603]
+280.00ms  1.6100us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [612]
+280.02ms  1.7480us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [620]
+280.04ms  1.5660us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [629]
+280.06ms  1.7490us              (1 1 1)       (512 1 1)        12        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan1(float*, float*, int, int) [637]
+280.08ms  1.5350us              (4 4 1)         (4 4 1)        11        0B        0B         -           -  Tesla M2090 (0)         1         7  Fan2(float*, float*, float*, int, int, int) [646]
+280.10ms  3.7760us                    -               -         -         -         -  1.0000KB  258.62MB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+280.13ms  3.7760us                    -               -         -         -         -  1.0000KB  258.62MB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+280.15ms  3.7120us                    -               -         -         -         -       64B  16.443MB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.

@@ -1,0 +1,88 @@
+
+cuda/8.0 : CUDA compiler and related CUDA programs
+
+
+cudnn/6.0 : Deep neural network library for cuda 7.5 or greater
+
+==11092== NVPROF is profiling process 11092, command: ./srad 2048 2048 0 127 0 127 0.5 2
+==11092== Warning: Unified Memory Profiling is not supported on devices of compute capability less than 3.0
+==11092== Profiling application: ./srad 2048 2048 0 127 0 127 0.5 2
+==11092== Profiling result:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 39.02%  10.578ms         2  5.2892ms  5.2697ms  5.3087ms  [CUDA memcpy DtoH]
+ 33.50%  9.0817ms         2  4.5409ms  4.5243ms  4.5574ms  [CUDA memcpy HtoD]
+ 16.85%  4.5684ms         2  2.2842ms  2.2838ms  2.2847ms  srad_cuda_1(float*, float*, float*, float*, float*, float*, int, int, float)
+ 10.62%  2.8781ms         2  1.4390ms  1.4386ms  1.4395ms  srad_cuda_2(float*, float*, float*, float*, float*, float*, int, int, float, float)
+
+==11092== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 81.60%  152.64ms         6  25.440ms  239.65us  151.38ms  cudaMalloc
+ 15.31%  28.630ms         4  7.1574ms  4.6273ms  9.7143ms  cudaMemcpy
+  1.58%  2.9615ms       364  8.1350us     203ns  333.68us  cuDeviceGetAttribute
+  0.90%  1.6917ms         6  281.95us  211.06us  517.83us  cudaFree
+  0.36%  672.47us         4  168.12us  162.48us  178.03us  cuDeviceTotalMem
+  0.16%  293.92us         4  73.479us  66.955us  88.897us  cuDeviceGetName
+  0.06%  119.53us         4  29.881us  10.146us  58.950us  cudaLaunch
+  0.01%  23.557us        38     619ns     285ns  10.188us  cudaSetupArgument
+  0.01%  12.155us         1  12.155us  12.155us  12.155us  cudaThreadSynchronize
+  0.00%  6.5840us         4  1.6460us     515ns  3.8300us  cudaConfigureCall
+  0.00%  6.2280us        12     519ns     198ns  1.3090us  cuDeviceGet
+  0.00%  4.1730us         3  1.3910us     276ns  3.0400us  cuDeviceGetCount
+==11110== NVPROF is profiling process 11110, command: ./srad 2048 2048 0 127 0 127 0.5 2
+==11110== Warning: Unified Memory Profiling is not supported on devices of compute capability less than 3.0
+==11110== Profiling application: ./srad 2048 2048 0 127 0 127 0.5 2
+==11110== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput           Device   Context    Stream  Name
+442.97ms  4.0167ms                    -               -         -         -         -  16.000MB  3.8900GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+447.00ms  2.2863ms          (128 128 1)       (16 16 1)        19  6.0000KB        0B         -           -  Tesla M2090 (0)         1         7  srad_cuda_1(float*, float*, float*, float*, float*, float*, int, int, float) [405]
+449.28ms  1.4413ms          (128 128 1)       (16 16 1)        17  5.0000KB        0B         -           -  Tesla M2090 (0)         1         7  srad_cuda_2(float*, float*, float*, float*, float*, float*, int, int, float, float) [417]
+450.73ms  4.6178ms                    -               -         -         -         -  16.000MB  3.3836GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+456.06ms  3.9935ms                    -               -         -         -         -  16.000MB  3.9126GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+460.06ms  2.2850ms          (128 128 1)       (16 16 1)        19  6.0000KB        0B         -           -  Tesla M2090 (0)         1         7  srad_cuda_1(float*, float*, float*, float*, float*, float*, int, int, float) [430]
+462.35ms  1.4385ms          (128 128 1)       (16 16 1)        17  5.0000KB        0B         -           -  Tesla M2090 (0)         1         7  srad_cuda_2(float*, float*, float*, float*, float*, float*, int, int, float, float) [442]
+463.79ms  4.7265ms                    -               -         -         -         -  16.000MB  3.3058GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+==11154== NVPROF is profiling process 11154, command: ./srad 2048 2048 0 127 0 127 0.5 2
+==11154== Warning: Unified Memory Profiling is not supported on devices of compute capability less than 3.0
+==11154== Profiling application: ./srad 2048 2048 0 127 0 127 0.5 2
+==11154== Profiling result:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 38.16%  9.7804ms         2  4.8902ms  4.8538ms  4.9266ms  [CUDA memcpy DtoH]
+ 32.79%  8.4032ms         2  4.2016ms  4.1848ms  4.2185ms  [CUDA memcpy HtoD]
+ 17.82%  4.5687ms         2  2.2844ms  2.2843ms  2.2844ms  srad_cuda_1(float*, float*, float*, float*, float*, float*, int, int, float)
+ 11.23%  2.8789ms         2  1.4395ms  1.4386ms  1.4403ms  srad_cuda_2(float*, float*, float*, float*, float*, float*, int, int, float, float)
+
+==11154== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 81.07%  139.97ms         6  23.328ms  227.89us  138.77ms  cudaMalloc
+ 15.67%  27.051ms         4  6.7626ms  4.2767ms  9.2555ms  cudaMemcpy
+  1.71%  2.9449ms       364  8.0900us     190ns  329.39us  cuDeviceGetAttribute
+  0.93%  1.6018ms         6  266.97us  197.85us  477.74us  cudaFree
+  0.37%  635.26us         4  158.81us  154.82us  165.62us  cuDeviceTotalMem
+  0.17%  289.67us         4  72.417us  65.748us  88.661us  cuDeviceGetName
+  0.07%  116.40us         4  29.099us  9.4580us  55.837us  cudaLaunch
+  0.01%  18.639us        38     490ns     200ns  9.3710us  cudaSetupArgument
+  0.01%  11.724us         1  11.724us  11.724us  11.724us  cudaThreadSynchronize
+  0.00%  6.6660us         4  1.6660us     453ns  3.8800us  cudaConfigureCall
+  0.00%  6.0190us        12     501ns     199ns  1.2940us  cuDeviceGet
+  0.00%  3.9860us         3  1.3280us     424ns  2.7030us  cuDeviceGetCount
+==11172== NVPROF is profiling process 11172, command: ./srad 2048 2048 0 127 0 127 0.5 2
+==11172== Warning: Unified Memory Profiling is not supported on devices of compute capability less than 3.0
+==11172== Profiling application: ./srad 2048 2048 0 127 0 127 0.5 2
+==11172== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput           Device   Context    Stream  Name
+462.15ms  4.0901ms                    -               -         -         -         -  16.000MB  3.8202GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+466.25ms  2.2858ms          (128 128 1)       (16 16 1)        19  6.0000KB        0B         -           -  Tesla M2090 (0)         1         7  srad_cuda_1(float*, float*, float*, float*, float*, float*, int, int, float) [405]
+468.53ms  1.4391ms          (128 128 1)       (16 16 1)        17  5.0000KB        0B         -           -  Tesla M2090 (0)         1         7  srad_cuda_2(float*, float*, float*, float*, float*, float*, int, int, float, float) [417]
+469.98ms  4.7137ms                    -               -         -         -         -  16.000MB  3.3148GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+475.43ms  4.0512ms                    -               -         -         -         -  16.000MB  3.8569GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+479.48ms  2.2837ms          (128 128 1)       (16 16 1)        19  6.0000KB        0B         -           -  Tesla M2090 (0)         1         7  srad_cuda_1(float*, float*, float*, float*, float*, float*, int, int, float) [430]
+481.77ms  1.4377ms          (128 128 1)       (16 16 1)        17  5.0000KB        0B         -           -  Tesla M2090 (0)         1         7  srad_cuda_2(float*, float*, float*, float*, float*, float*, int, int, float, float) [442]
+483.21ms  4.7683ms                    -               -         -         -         -  16.000MB  3.2768GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.

@@ -1,0 +1,624 @@
+Script began: Sun Nov 12 18:29:08 PST 2017
+Node: compute-1-14.local
+
+Current directory:/data/users/zhizhonk/rodinia/cuda/dwt2d
+
+Current GPU:Sun Nov 12 18:29:17 2017       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 384.66                 Driver Version: 384.66                    |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla M2090         Off  | 00000000:04:00.0 Off |                    0 |
+| N/A   N/A    P0    75W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla M2090         Off  | 00000000:05:00.0 Off |                    0 |
+| N/A   N/A    P0    77W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla M2090         Off  | 00000000:83:00.0 Off |                    0 |
+| N/A   N/A    P0    75W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla M2090         Off  | 00000000:84:00.0 Off |                    0 |
+| N/A   N/A    P0    74W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID  Type  Process name                               Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+
+running dwt2d
+*** Trial 1 ***
+Using device 0: Tesla M2090
+Source file:		192.bmp
+ Dimensions:		192x192
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: ../../data/dwt2d/192.bmp
+precteno 110592, inputsize 110592
+
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 2 , gx = 3 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 2 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 1 , gy = 6 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 2 , gx = 3 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 2 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 1 , gy = 6 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 2 , gx = 3 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 2 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 1 , gy = 6 
+fdwt53Kernel in launchFDWT53Kernel has finished
+Writing to 192.bmp.dwt.r (192 x 192)
+
+Writing to 192.bmp.dwt.g (192 x 192)
+
+Writing to 192.bmp.dwt.b (192 x 192)
+Using device 0: Tesla M2090
+Source file:		192.bmp
+ Dimensions:		192x192
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: ../../data/dwt2d/192.bmp
+precteno 110592, inputsize 110592
+
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 2 , gx = 3 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 2 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 1 , gy = 6 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 2 , gx = 3 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 2 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 1 , gy = 6 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 2 , gx = 3 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 2 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 1 , gy = 6 
+fdwt53Kernel in launchFDWT53Kernel has finished
+Writing to 192.bmp.dwt.r (192 x 192)
+
+Writing to 192.bmp.dwt.g (192 x 192)
+
+Writing to 192.bmp.dwt.b (192 x 192)
+Using device 0: Tesla M2090
+Source file:		192.bmp
+ Dimensions:		192x192
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: ../../data/dwt2d/192.bmp
+precteno 110592, inputsize 110592
+
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 2 , gx = 3 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 2 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 1 , gy = 6 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 2 , gx = 3 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 2 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 1 , gy = 6 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 2 , gx = 3 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 2 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 1 , gy = 6 
+fdwt53Kernel in launchFDWT53Kernel has finished
+Writing to 192.bmp.dwt.r (192 x 192)
+
+Writing to 192.bmp.dwt.g (192 x 192)
+
+Writing to 192.bmp.dwt.b (192 x 192)
+192.bmp.dwt.b
+192.bmp.dwt.g
+192.bmp.dwt.r
+autorun
+BNCHMRK_DWT2D.e2860063
+BNCHMRK_DWT2D.o2860063
+clean.sh
+common.h
+compile.sh
+components.cu
+components.h
+components.o
+dwt2d
+dwt2d.cu
+dwt.cu
+dwt_cuda
+dwt.h
+dwt_kernel.c.copy
+dwt.o
+Makefile
+README
+result.txt
+rgb.bmp.dwt.b
+rgb.bmp.dwt.g
+rgb.bmp.dwt.r
+run
+run_gpu.sh
+Using device 0: Tesla M2090
+Source file:		rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: ../../data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 9 , gx = 6 , gy = 15 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 5 , gx = 4 , gy = 13 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 3 , gx = 4 , gy = 11 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 9 , gx = 6 , gy = 15 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 5 , gx = 4 , gy = 13 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 3 , gx = 4 , gy = 11 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 9 , gx = 6 , gy = 15 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 5 , gx = 4 , gy = 13 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 3 , gx = 4 , gy = 11 
+fdwt53Kernel in launchFDWT53Kernel has finished
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Using device 0: Tesla M2090
+Source file:		rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: ../../data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 9 , gx = 6 , gy = 15 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 5 , gx = 4 , gy = 13 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 3 , gx = 4 , gy = 11 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 9 , gx = 6 , gy = 15 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 5 , gx = 4 , gy = 13 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 3 , gx = 4 , gy = 11 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 9 , gx = 6 , gy = 15 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 5 , gx = 4 , gy = 13 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 3 , gx = 4 , gy = 11 
+fdwt53Kernel in launchFDWT53Kernel has finished
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Using device 0: Tesla M2090
+Source file:		rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: ../../data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 9 , gx = 6 , gy = 15 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 5 , gx = 4 , gy = 13 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 3 , gx = 4 , gy = 11 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 9 , gx = 6 , gy = 15 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 5 , gx = 4 , gy = 13 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 3 , gx = 4 , gy = 11 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 9 , gx = 6 , gy = 15 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 5 , gx = 4 , gy = 13 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 3 , gx = 4 , gy = 11 
+fdwt53Kernel in launchFDWT53Kernel has finished
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Current GPU:Sun Nov 12 18:30:26 2017       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 384.66                 Driver Version: 384.66                    |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla M2090         Off  | 00000000:04:00.0 Off |                    0 |
+| N/A   N/A    P0    76W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla M2090         Off  | 00000000:05:00.0 Off |                    0 |
+| N/A   N/A    P0    77W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla M2090         Off  | 00000000:83:00.0 Off |                    0 |
+| N/A   N/A    P0    75W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla M2090         Off  | 00000000:84:00.0 Off |                    0 |
+| N/A   N/A    P0    75W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID  Type  Process name                               Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+*** Trial 2 ***
+Using device 0: Tesla M2090
+Source file:		192.bmp
+ Dimensions:		192x192
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: ../../data/dwt2d/192.bmp
+precteno 110592, inputsize 110592
+
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 2 , gx = 3 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 2 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 1 , gy = 6 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 2 , gx = 3 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 2 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 1 , gy = 6 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 2 , gx = 3 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 2 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 1 , gy = 6 
+fdwt53Kernel in launchFDWT53Kernel has finished
+Writing to 192.bmp.dwt.r (192 x 192)
+
+Writing to 192.bmp.dwt.g (192 x 192)
+
+Writing to 192.bmp.dwt.b (192 x 192)
+Using device 0: Tesla M2090
+Source file:		192.bmp
+ Dimensions:		192x192
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: ../../data/dwt2d/192.bmp
+precteno 110592, inputsize 110592
+
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 2 , gx = 3 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 2 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 1 , gy = 6 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 2 , gx = 3 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 2 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 1 , gy = 6 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 2 , gx = 3 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 2 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 1 , gy = 6 
+fdwt53Kernel in launchFDWT53Kernel has finished
+Writing to 192.bmp.dwt.r (192 x 192)
+
+Writing to 192.bmp.dwt.g (192 x 192)
+
+Writing to 192.bmp.dwt.b (192 x 192)
+Using device 0: Tesla M2090
+Source file:		192.bmp
+ Dimensions:		192x192
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: ../../data/dwt2d/192.bmp
+precteno 110592, inputsize 110592
+
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 2 , gx = 3 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 2 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 1 , gy = 6 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 2 , gx = 3 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 2 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 1 , gy = 6 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 2 , gx = 3 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 2 , gy = 12 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 1 , gx = 1 , gy = 6 
+fdwt53Kernel in launchFDWT53Kernel has finished
+Writing to 192.bmp.dwt.r (192 x 192)
+
+Writing to 192.bmp.dwt.g (192 x 192)
+
+Writing to 192.bmp.dwt.b (192 x 192)
+192.bmp.dwt.b
+192.bmp.dwt.g
+192.bmp.dwt.r
+autorun
+BNCHMRK_DWT2D.e2860063
+BNCHMRK_DWT2D.o2860063
+clean.sh
+common.h
+compile.sh
+components.cu
+components.h
+components.o
+dwt2d
+dwt2d.cu
+dwt.cu
+dwt_cuda
+dwt.h
+dwt_kernel.c.copy
+dwt.o
+Makefile
+README
+result.txt
+rgb.bmp.dwt.b
+rgb.bmp.dwt.g
+rgb.bmp.dwt.r
+run
+run_gpu.sh
+Using device 0: Tesla M2090
+Source file:		rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: ../../data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 9 , gx = 6 , gy = 15 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 5 , gx = 4 , gy = 13 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 3 , gx = 4 , gy = 11 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 9 , gx = 6 , gy = 15 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 5 , gx = 4 , gy = 13 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 3 , gx = 4 , gy = 11 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 9 , gx = 6 , gy = 15 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 5 , gx = 4 , gy = 13 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 3 , gx = 4 , gy = 11 
+fdwt53Kernel in launchFDWT53Kernel has finished
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Using device 0: Tesla M2090
+Source file:		rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: ../../data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 9 , gx = 6 , gy = 15 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 5 , gx = 4 , gy = 13 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 3 , gx = 4 , gy = 11 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 9 , gx = 6 , gy = 15 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 5 , gx = 4 , gy = 13 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 3 , gx = 4 , gy = 11 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 9 , gx = 6 , gy = 15 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 5 , gx = 4 , gy = 13 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 3 , gx = 4 , gy = 11 
+fdwt53Kernel in launchFDWT53Kernel has finished
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Using device 0: Tesla M2090
+Source file:		rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: ../../data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 9 , gx = 6 , gy = 15 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 5 , gx = 4 , gy = 13 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 3 , gx = 4 , gy = 11 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 9 , gx = 6 , gy = 15 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 5 , gx = 4 , gy = 13 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 3 , gx = 4 , gy = 11 
+fdwt53Kernel in launchFDWT53Kernel has finished
+*** 3 stages of 2D forward DWT:
+
+ sliding steps = 9 , gx = 6 , gy = 15 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 5 , gx = 4 , gy = 13 
+fdwt53Kernel in launchFDWT53Kernel has finished
+ sliding steps = 3 , gx = 4 , gy = 11 
+fdwt53Kernel in launchFDWT53Kernel has finished
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Current GPU:Sun Nov 12 18:31:35 2017       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 384.66                 Driver Version: 384.66                    |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla M2090         Off  | 00000000:04:00.0 Off |                    0 |
+| N/A   N/A    P0    77W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla M2090         Off  | 00000000:05:00.0 Off |                    0 |
+| N/A   N/A    P0    77W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla M2090         Off  | 00000000:83:00.0 Off |                    0 |
+| N/A   N/A    P0    75W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla M2090         Off  | 00000000:84:00.0 Off |                    0 |
+| N/A   N/A    P0    75W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID  Type  Process name                               Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+=== done! ===

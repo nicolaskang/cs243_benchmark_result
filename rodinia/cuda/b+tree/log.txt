@@ -1,0 +1,246 @@
+==28560== NVPROF is profiling process 28560, command: ./b+tree file ../../data/b+tree/mil.txt command ../../data/b+tree/command.txt
+==28560== Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
+==28560== Profiling application: ./b+tree file ../../data/b+tree/mil.txt command ../../data/b+tree/command.txt
+==28560== Profiling result:
+==28560== Metric result:
+"Device","Kernel","Invocations","Metric Name","Metric Description","Min","Max","Avg"
+"GeForce GTX 1080 (0)","findRangeK",1,"inst_per_warp","Instructions per warp",232.801917,232.801917,232.801917
+"GeForce GTX 1080 (0)","findRangeK",1,"branch_efficiency","Branch Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 (0)","findRangeK",1,"warp_execution_efficiency","Warp Execution Efficiency",96.385631%,96.385631%,96.385631%
+"GeForce GTX 1080 (0)","findRangeK",1,"warp_nonpred_execution_efficiency","Warp Non-Predicated Execution Efficiency",93.982196%,93.982196%,93.982196%
+"GeForce GTX 1080 (0)","findRangeK",1,"inst_replay_overhead","Instruction Replay Overhead",0.000214,0.000214,0.000214
+"GeForce GTX 1080 (0)","findRangeK",1,"shared_load_transactions_per_request","Shared Memory Load Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 (0)","findRangeK",1,"shared_store_transactions_per_request","Shared Memory Store Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 (0)","findRangeK",1,"local_load_transactions_per_request","Local Memory Load Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 (0)","findRangeK",1,"local_store_transactions_per_request","Local Memory Store Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 (0)","findRangeK",1,"gld_transactions_per_request","Global Load Transactions Per Request",5.639727,5.639727,5.639727
+"GeForce GTX 1080 (0)","findRangeK",1,"gst_transactions_per_request","Global Store Transactions Per Request",0.588235,0.588235,0.588235
+"GeForce GTX 1080 (0)","findRangeK",1,"shared_store_transactions","Shared Store Transactions",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"shared_load_transactions","Shared Load Transactions",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"local_load_transactions","Local Load Transactions",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"local_store_transactions","Local Store Transactions",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"gld_transactions","Global Load Transactions",5515416,5515416,5515416
+"GeForce GTX 1080 (0)","findRangeK",1,"gst_transactions","Global Store Transactions",60000,60000,60000
+"GeForce GTX 1080 (0)","findRangeK",1,"sysmem_read_transactions","System Memory Read Transactions",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"sysmem_write_transactions","System Memory Write Transactions",5,5,5
+"GeForce GTX 1080 (0)","findRangeK",1,"l2_read_transactions","L2 Read Transactions",2246295,2246295,2246295
+"GeForce GTX 1080 (0)","findRangeK",1,"l2_write_transactions","L2 Write Transactions",60013,60013,60013
+"GeForce GTX 1080 (0)","findRangeK",1,"global_hit_rate","Global Hit Rate",59.279971%,59.279971%,59.279971%
+"GeForce GTX 1080 (0)","findRangeK",1,"local_hit_rate","Local Hit Rate",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 (0)","findRangeK",1,"gld_requested_throughput","Requested Global Load Throughput",140.754559GB/s,140.754559GB/s,140.754506GB/s
+"GeForce GTX 1080 (0)","findRangeK",1,"gst_requested_throughput","Requested Global Store Throughput",1.342380GB/s,1.342380GB/s,1.342036GB/s
+"GeForce GTX 1080 (0)","findRangeK",1,"gld_throughput","Global Load Throughput",223.320188GB/s,223.320188GB/s,223.319978GB/s
+"GeForce GTX 1080 (0)","findRangeK",1,"gst_throughput","Global Store Throughput",5.966132GB/s,5.966132GB/s,5.966052GB/s
+"GeForce GTX 1080 (0)","findRangeK",1,"local_memory_overhead","Local Memory Overhead",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 (0)","findRangeK",1,"tex_cache_hit_rate","Unified Cache Hit Rate",58.642028%,58.642028%,58.642028%
+"GeForce GTX 1080 (0)","findRangeK",1,"l2_tex_read_hit_rate","L2 Hit Rate (Texture Reads)",84.804524%,84.804524%,84.804524%
+"GeForce GTX 1080 (0)","findRangeK",1,"l2_tex_write_hit_rate","L2 Hit Rate (Texture Writes)",98.123333%,98.123333%,98.123333%
+"GeForce GTX 1080 (0)","findRangeK",1,"tex_cache_throughput","Unified Cache Throughput",483.160861GB/s,483.160861GB/s,483.160838GB/s
+"GeForce GTX 1080 (0)","findRangeK",1,"l2_tex_read_throughput","L2 Throughput (Texture Reads)",223.320188GB/s,223.320188GB/s,223.319978GB/s
+"GeForce GTX 1080 (0)","findRangeK",1,"l2_tex_write_throughput","L2 Throughput (Texture Writes)",5.966132GB/s,5.966132GB/s,5.966052GB/s
+"GeForce GTX 1080 (0)","findRangeK",1,"l2_read_throughput","L2 Throughput (Reads)",223.361553GB/s,223.361553GB/s,223.360956GB/s
+"GeForce GTX 1080 (0)","findRangeK",1,"l2_write_throughput","L2 Throughput (Writes)",5.967425GB/s,5.967425GB/s,5.966984GB/s
+"GeForce GTX 1080 (0)","findRangeK",1,"sysmem_read_throughput","System Memory Read Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 (0)","findRangeK",1,"sysmem_write_throughput","System Memory Write Throughput",521.328125KB/s,521.328125KB/s,0.000000B/s
+"GeForce GTX 1080 (0)","findRangeK",1,"local_load_throughput","Local Memory Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 (0)","findRangeK",1,"local_store_throughput","Local Memory Store Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 (0)","findRangeK",1,"shared_load_throughput","Shared Memory Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 (0)","findRangeK",1,"shared_store_throughput","Shared Memory Store Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 (0)","findRangeK",1,"gld_efficiency","Global Memory Load Efficiency",63.028140%,63.028140%,63.028140%
+"GeForce GTX 1080 (0)","findRangeK",1,"gst_efficiency","Global Memory Store Efficiency",22.500000%,22.500000%,22.500000%
+"GeForce GTX 1080 (0)","findRangeK",1,"tex_cache_transactions","Unified Cache Transactions",4859036,4859036,4859036
+"GeForce GTX 1080 (0)","findRangeK",1,"flop_count_dp","Floating Point Operations(Double Precision)",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"flop_count_dp_add","Floating Point Operations(Double Precision Add)",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"flop_count_dp_fma","Floating Point Operations(Double Precision FMA)",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"flop_count_dp_mul","Floating Point Operations(Double Precision Mul)",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"flop_count_sp","Floating Point Operations(Single Precision)",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"flop_count_sp_add","Floating Point Operations(Single Precision Add)",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"flop_count_sp_fma","Floating Point Operations(Single Precision FMA)",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"flop_count_sp_mul","Floating Point Operation(Single Precision Mul)",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"flop_count_sp_special","Floating Point Operations(Single Precision Special)",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"inst_executed","Instructions Executed",11174492,11174492,11174492
+"GeForce GTX 1080 (0)","findRangeK",1,"inst_issued","Instructions Issued",11177396,11177396,11177396
+"GeForce GTX 1080 (0)","findRangeK",1,"sysmem_utilization","System Memory Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 (0)","findRangeK",1,"stall_inst_fetch","Issue Stall Reasons (Instructions Fetch)",2.266843%,2.266843%,2.266843%
+"GeForce GTX 1080 (0)","findRangeK",1,"stall_exec_dependency","Issue Stall Reasons (Execution Dependency)",4.376733%,4.376733%,4.376733%
+"GeForce GTX 1080 (0)","findRangeK",1,"stall_memory_dependency","Issue Stall Reasons (Data Request)",52.537730%,52.537730%,52.537730%
+"GeForce GTX 1080 (0)","findRangeK",1,"stall_texture","Issue Stall Reasons (Texture)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 (0)","findRangeK",1,"stall_sync","Issue Stall Reasons (Synchronization)",37.891274%,37.891274%,37.891274%
+"GeForce GTX 1080 (0)","findRangeK",1,"stall_other","Issue Stall Reasons (Other)",1.548083%,1.548083%,1.548083%
+"GeForce GTX 1080 (0)","findRangeK",1,"stall_constant_memory_dependency","Issue Stall Reasons (Immediate constant)",0.085419%,0.085419%,0.085419%
+"GeForce GTX 1080 (0)","findRangeK",1,"stall_pipe_busy","Issue Stall Reasons (Pipe Busy)",0.253202%,0.253202%,0.253202%
+"GeForce GTX 1080 (0)","findRangeK",1,"shared_efficiency","Shared Memory Efficiency",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 (0)","findRangeK",1,"inst_fp_32","FP Instructions(Single)",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"inst_fp_64","FP Instructions(Double)",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"inst_integer","Integer Instructions",214782174,214782174,214782174
+"GeForce GTX 1080 (0)","findRangeK",1,"inst_bit_convert","Bit-Convert Instructions",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"inst_control","Control-Flow Instructions",23034000,23034000,23034000
+"GeForce GTX 1080 (0)","findRangeK",1,"inst_compute_ld_st","Load/Store Instructions",28928286,28928286,28928286
+"GeForce GTX 1080 (0)","findRangeK",1,"inst_misc","Misc Instructions",69320604,69320604,69320604
+"GeForce GTX 1080 (0)","findRangeK",1,"inst_inter_thread_communication","Inter-Thread Instructions",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"issue_slots","Issue Slots",10205396,10205396,10205396
+"GeForce GTX 1080 (0)","findRangeK",1,"cf_issued","Issued Control-Flow Instructions",905958,905958,905958
+"GeForce GTX 1080 (0)","findRangeK",1,"cf_executed","Executed Control-Flow Instructions",905958,905958,905958
+"GeForce GTX 1080 (0)","findRangeK",1,"ldst_issued","Issued Load/Store Instructions",4079036,4079036,4079036
+"GeForce GTX 1080 (0)","findRangeK",1,"ldst_executed","Executed Load/Store Instructions",1415958,1415958,1415958
+"GeForce GTX 1080 (0)","findRangeK",1,"atomic_transactions","Atomic Transactions",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"atomic_transactions_per_request","Atomic Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 (0)","findRangeK",1,"l2_atomic_throughput","L2 Throughput (Atomic requests)",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 (0)","findRangeK",1,"l2_atomic_transactions","L2 Transactions (Atomic requests)",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"l2_tex_read_transactions","L2 Transactions (Texture Reads)",2245879,2245879,2245879
+"GeForce GTX 1080 (0)","findRangeK",1,"stall_memory_throttle","Issue Stall Reasons (Memory Throttle)",0.002022%,0.002022%,0.002022%
+"GeForce GTX 1080 (0)","findRangeK",1,"stall_not_selected","Issue Stall Reasons (Not Selected)",1.038693%,1.038693%,1.038693%
+"GeForce GTX 1080 (0)","findRangeK",1,"l2_tex_write_transactions","L2 Transactions (Texture Writes)",60000,60000,60000
+"GeForce GTX 1080 (0)","findRangeK",1,"flop_count_hp","Floating Point Operations(Half Precision)",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"flop_count_hp_add","Floating Point Operations(Half Precision Add)",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"flop_count_hp_mul","Floating Point Operation(Half Precision Mul)",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"flop_count_hp_fma","Floating Point Operations(Half Precision FMA)",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"inst_fp_16","HP Instructions(Half)",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"sysmem_read_utilization","System Memory Read Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 (0)","findRangeK",1,"sysmem_write_utilization","System Memory Write Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 (0)","findRangeK",1,"sm_activity","Multiprocessor Activity",98.880738%,98.880738%,98.880738%
+"GeForce GTX 1080 (0)","findRangeK",1,"achieved_occupancy","Achieved Occupancy",0.939698,0.939698,0.939698
+"GeForce GTX 1080 (0)","findRangeK",1,"executed_ipc","Executed IPC",1.188128,1.188128,1.188128
+"GeForce GTX 1080 (0)","findRangeK",1,"issued_ipc","Issued IPC",1.176555,1.176555,1.176555
+"GeForce GTX 1080 (0)","findRangeK",1,"issue_slot_utilization","Issue Slot Utilization",26.856017%,26.856017%,26.856017%
+"GeForce GTX 1080 (0)","findRangeK",1,"eligible_warps_per_cycle","Eligible Warps Per Active Cycle",1.676095,1.676095,1.676095
+"GeForce GTX 1080 (0)","findRangeK",1,"tex_utilization","Unified Cache Utilization","Low (3)","Low (3)","Low (3)"
+"GeForce GTX 1080 (0)","findRangeK",1,"l2_utilization","L2 Cache Utilization","Low (3)","Low (3)","Low (3)"
+"GeForce GTX 1080 (0)","findRangeK",1,"shared_utilization","Shared Memory Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 (0)","findRangeK",1,"ldst_fu_utilization","Load/Store Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 (0)","findRangeK",1,"cf_fu_utilization","Control-Flow Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 (0)","findRangeK",1,"special_fu_utilization","Special Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 (0)","findRangeK",1,"tex_fu_utilization","Texture Function Unit Utilization","Low (2)","Low (2)","Low (2)"
+"GeForce GTX 1080 (0)","findRangeK",1,"single_precision_fu_utilization","Single-Precision Function Unit Utilization","Low (3)","Low (3)","Low (3)"
+"GeForce GTX 1080 (0)","findRangeK",1,"double_precision_fu_utilization","Double-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 (0)","findRangeK",1,"flop_hp_efficiency","FLOP Efficiency(Peak Half)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 (0)","findRangeK",1,"flop_sp_efficiency","FLOP Efficiency(Peak Single)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 (0)","findRangeK",1,"flop_dp_efficiency","FLOP Efficiency(Peak Double)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 (0)","findRangeK",1,"dram_read_transactions","Device Memory Read Transactions",341412,341412,341412
+"GeForce GTX 1080 (0)","findRangeK",1,"dram_write_transactions","Device Memory Write Transactions",38043,38043,38043
+"GeForce GTX 1080 (0)","findRangeK",1,"dram_read_throughput","Device Memory Read Throughput",33.948486GB/s,33.948486GB/s,33.947639GB/s
+"GeForce GTX 1080 (0)","findRangeK",1,"dram_write_throughput","Device Memory Write Throughput",3.782826GB/s,3.782826GB/s,3.782101GB/s
+"GeForce GTX 1080 (0)","findRangeK",1,"dram_utilization","Device Memory Utilization","Low (2)","Low (2)","Low (2)"
+"GeForce GTX 1080 (0)","findRangeK",1,"half_precision_fu_utilization","Half-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 (0)","findRangeK",1,"ecc_transactions","ECC Transactions",0,0,0
+"GeForce GTX 1080 (0)","findRangeK",1,"ecc_throughput","ECC Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 (0)","findK",1,"inst_per_warp","Instructions per warp",147.028337,147.028337,147.028337
+"GeForce GTX 1080 (0)","findK",1,"branch_efficiency","Branch Efficiency",100.000000%,100.000000%,100.000000%
+"GeForce GTX 1080 (0)","findK",1,"warp_execution_efficiency","Warp Execution Efficiency",92.063148%,92.063148%,92.063148%
+"GeForce GTX 1080 (0)","findK",1,"warp_nonpred_execution_efficiency","Warp Non-Predicated Execution Efficiency",90.436924%,90.436924%,90.436924%
+"GeForce GTX 1080 (0)","findK",1,"inst_replay_overhead","Instruction Replay Overhead",0.000241,0.000241,0.000241
+"GeForce GTX 1080 (0)","findK",1,"shared_load_transactions_per_request","Shared Memory Load Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 (0)","findK",1,"shared_store_transactions_per_request","Shared Memory Store Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 (0)","findK",1,"local_load_transactions_per_request","Local Memory Load Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 (0)","findK",1,"local_store_transactions_per_request","Local Memory Store Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 (0)","findK",1,"gld_transactions_per_request","Global Load Transactions Per Request",5.497523,5.497523,5.497523
+"GeForce GTX 1080 (0)","findK",1,"gst_transactions_per_request","Global Store Transactions Per Request",1.000000,1.000000,1.000000
+"GeForce GTX 1080 (0)","findK",1,"shared_store_transactions","Shared Store Transactions",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"shared_load_transactions","Shared Load Transactions",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"local_load_transactions","Local Load Transactions",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"local_store_transactions","Local Store Transactions",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"gld_transactions","Global Load Transactions",4615682,4615682,4615682
+"GeForce GTX 1080 (0)","findK",1,"gst_transactions","Global Store Transactions",50000,50000,50000
+"GeForce GTX 1080 (0)","findK",1,"sysmem_read_transactions","System Memory Read Transactions",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"sysmem_write_transactions","System Memory Write Transactions",5,5,5
+"GeForce GTX 1080 (0)","findK",1,"l2_read_transactions","L2 Read Transactions",1894314,1894314,1894314
+"GeForce GTX 1080 (0)","findK",1,"l2_write_transactions","L2 Write Transactions",50013,50013,50013
+"GeForce GTX 1080 (0)","findK",1,"global_hit_rate","Global Hit Rate",58.966801%,58.966801%,58.966801%
+"GeForce GTX 1080 (0)","findK",1,"local_hit_rate","Local Hit Rate",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 (0)","findK",1,"gld_requested_throughput","Requested Global Load Throughput",110.508599GB/s,110.508599GB/s,110.507943GB/s
+"GeForce GTX 1080 (0)","findK",1,"gst_requested_throughput","Requested Global Store Throughput",1.050130GB/s,1.050130GB/s,1.049601GB/s
+"GeForce GTX 1080 (0)","findK",1,"gld_throughput","Global Load Throughput",176.791710GB/s,176.791710GB/s,176.791102GB/s
+"GeForce GTX 1080 (0)","findK",1,"gst_throughput","Global Store Throughput",4.667245GB/s,4.667245GB/s,4.666857GB/s
+"GeForce GTX 1080 (0)","findK",1,"local_memory_overhead","Local Memory Overhead",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 (0)","findK",1,"tex_cache_hit_rate","Unified Cache Hit Rate",58.334880%,58.334880%,58.334880%
+"GeForce GTX 1080 (0)","findK",1,"l2_tex_read_hit_rate","L2 Hit Rate (Texture Reads)",83.921906%,83.921906%,83.921906%
+"GeForce GTX 1080 (0)","findK",1,"l2_tex_write_hit_rate","L2 Hit Rate (Texture Writes)",99.374000%,99.374000%,99.374000%
+"GeForce GTX 1080 (0)","findK",1,"tex_cache_throughput","Unified Cache Throughput",382.052591GB/s,382.052591GB/s,382.051803GB/s
+"GeForce GTX 1080 (0)","findK",1,"l2_tex_read_throughput","L2 Throughput (Texture Reads)",176.791710GB/s,176.791710GB/s,176.791102GB/s
+"GeForce GTX 1080 (0)","findK",1,"l2_tex_write_throughput","L2 Throughput (Texture Writes)",4.667245GB/s,4.667245GB/s,4.666857GB/s
+"GeForce GTX 1080 (0)","findK",1,"l2_read_throughput","L2 Throughput (Reads)",176.824568GB/s,176.824568GB/s,176.823698GB/s
+"GeForce GTX 1080 (0)","findK",1,"l2_write_throughput","L2 Throughput (Writes)",4.668459GB/s,4.668459GB/s,4.667789GB/s
+"GeForce GTX 1080 (0)","findK",1,"sysmem_read_throughput","System Memory Read Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 (0)","findK",1,"sysmem_write_throughput","System Memory Write Throughput",489.395508KB/s,489.395508KB/s,0.000000B/s
+"GeForce GTX 1080 (0)","findK",1,"local_load_throughput","Local Memory Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 (0)","findK",1,"local_store_throughput","Local Memory Store Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 (0)","findK",1,"shared_load_throughput","Shared Memory Load Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 (0)","findK",1,"shared_store_throughput","Shared Memory Store Throughput",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 (0)","findK",1,"gld_efficiency","Global Memory Load Efficiency",62.507795%,62.507795%,62.507795%
+"GeForce GTX 1080 (0)","findK",1,"gst_efficiency","Global Memory Store Efficiency",22.500000%,22.500000%,22.500000%
+"GeForce GTX 1080 (0)","findK",1,"tex_cache_transactions","Unified Cache Transactions",4092913,4092913,4092913
+"GeForce GTX 1080 (0)","findK",1,"flop_count_dp","Floating Point Operations(Double Precision)",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"flop_count_dp_add","Floating Point Operations(Double Precision Add)",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"flop_count_dp_fma","Floating Point Operations(Double Precision FMA)",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"flop_count_dp_mul","Floating Point Operations(Double Precision Mul)",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"flop_count_sp","Floating Point Operations(Single Precision)",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"flop_count_sp_add","Floating Point Operations(Single Precision Add)",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"flop_count_sp_fma","Floating Point Operations(Single Precision FMA)",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"flop_count_sp_mul","Floating Point Operation(Single Precision Mul)",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"flop_count_sp_special","Floating Point Operations(Single Precision Special)",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"inst_executed","Instructions Executed",11762267,11762267,11762267
+"GeForce GTX 1080 (0)","findK",1,"inst_issued","Instructions Issued",11765106,11765106,11765106
+"GeForce GTX 1080 (0)","findK",1,"sysmem_utilization","System Memory Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 (0)","findK",1,"stall_inst_fetch","Issue Stall Reasons (Instructions Fetch)",2.595507%,2.595507%,2.595507%
+"GeForce GTX 1080 (0)","findK",1,"stall_exec_dependency","Issue Stall Reasons (Execution Dependency)",5.176218%,5.176218%,5.176218%
+"GeForce GTX 1080 (0)","findK",1,"stall_memory_dependency","Issue Stall Reasons (Data Request)",46.010675%,46.010675%,46.010675%
+"GeForce GTX 1080 (0)","findK",1,"stall_texture","Issue Stall Reasons (Texture)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 (0)","findK",1,"stall_sync","Issue Stall Reasons (Synchronization)",43.404998%,43.404998%,43.404998%
+"GeForce GTX 1080 (0)","findK",1,"stall_other","Issue Stall Reasons (Other)",1.598145%,1.598145%,1.598145%
+"GeForce GTX 1080 (0)","findK",1,"stall_constant_memory_dependency","Issue Stall Reasons (Immediate constant)",0.082530%,0.082530%,0.082530%
+"GeForce GTX 1080 (0)","findK",1,"stall_pipe_busy","Issue Stall Reasons (Pipe Busy)",0.274730%,0.274730%,0.274730%
+"GeForce GTX 1080 (0)","findK",1,"shared_efficiency","Shared Memory Efficiency",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 (0)","findK",1,"inst_fp_32","FP Instructions(Single)",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"inst_fp_64","FP Instructions(Double)",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"inst_integer","Integer Instructions",206794865,206794865,206794865
+"GeForce GTX 1080 (0)","findK",1,"inst_bit_convert","Bit-Convert Instructions",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"inst_control","Control-Flow Instructions",25600000,25600000,25600000
+"GeForce GTX 1080 (0)","findK",1,"inst_compute_ld_st","Load/Store Instructions",24120991,24120991,24120991
+"GeForce GTX 1080 (0)","findK",1,"inst_misc","Misc Instructions",83881982,83881982,83881982
+"GeForce GTX 1080 (0)","findK",1,"inst_inter_thread_communication","Inter-Thread Instructions",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"issue_slots","Issue Slots",10065106,10065106,10065106
+"GeForce GTX 1080 (0)","findK",1,"cf_issued","Issued Control-Flow Instructions",1049593,1049593,1049593
+"GeForce GTX 1080 (0)","findK",1,"cf_executed","Executed Control-Flow Instructions",1049593,1049593,1049593
+"GeForce GTX 1080 (0)","findK",1,"ldst_issued","Issued Load/Store Instructions",3622913,3622913,3622913
+"GeForce GTX 1080 (0)","findK",1,"ldst_executed","Executed Load/Store Instructions",1369593,1369593,1369593
+"GeForce GTX 1080 (0)","findK",1,"atomic_transactions","Atomic Transactions",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"atomic_transactions_per_request","Atomic Transactions Per Request",0.000000,0.000000,0.000000
+"GeForce GTX 1080 (0)","findK",1,"l2_atomic_throughput","L2 Throughput (Atomic requests)",0.000000B/s,0.000000B/s,0.000000B/s
+"GeForce GTX 1080 (0)","findK",1,"l2_atomic_transactions","L2 Transactions (Atomic requests)",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"l2_tex_read_transactions","L2 Transactions (Texture Reads)",1893962,1893962,1893962
+"GeForce GTX 1080 (0)","findK",1,"stall_memory_throttle","Issue Stall Reasons (Memory Throttle)",0.038868%,0.038868%,0.038868%
+"GeForce GTX 1080 (0)","findK",1,"stall_not_selected","Issue Stall Reasons (Not Selected)",0.818328%,0.818328%,0.818328%
+"GeForce GTX 1080 (0)","findK",1,"l2_tex_write_transactions","L2 Transactions (Texture Writes)",50000,50000,50000
+"GeForce GTX 1080 (0)","findK",1,"flop_count_hp","Floating Point Operations(Half Precision)",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"flop_count_hp_add","Floating Point Operations(Half Precision Add)",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"flop_count_hp_mul","Floating Point Operation(Half Precision Mul)",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"flop_count_hp_fma","Floating Point Operations(Half Precision FMA)",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"inst_fp_16","HP Instructions(Half)",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"sysmem_read_utilization","System Memory Read Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 (0)","findK",1,"sysmem_write_utilization","System Memory Write Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 (0)","findK",1,"sm_activity","Multiprocessor Activity",99.010702%,99.010702%,99.010702%
+"GeForce GTX 1080 (0)","findK",1,"achieved_occupancy","Achieved Occupancy",0.873667,0.873667,0.873667
+"GeForce GTX 1080 (0)","findK",1,"executed_ipc","Executed IPC",1.160399,1.160399,1.160399
+"GeForce GTX 1080 (0)","findK",1,"issued_ipc","Issued IPC",1.160679,1.160679,1.160679
+"GeForce GTX 1080 (0)","findK",1,"issue_slot_utilization","Issue Slot Utilization",24.824156%,24.824156%,24.824156%
+"GeForce GTX 1080 (0)","findK",1,"eligible_warps_per_cycle","Eligible Warps Per Active Cycle",1.438017,1.438017,1.438017
+"GeForce GTX 1080 (0)","findK",1,"tex_utilization","Unified Cache Utilization","Low (3)","Low (3)","Low (3)"
+"GeForce GTX 1080 (0)","findK",1,"l2_utilization","L2 Cache Utilization","Low (3)","Low (3)","Low (3)"
+"GeForce GTX 1080 (0)","findK",1,"shared_utilization","Shared Memory Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 (0)","findK",1,"ldst_fu_utilization","Load/Store Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 (0)","findK",1,"cf_fu_utilization","Control-Flow Function Unit Utilization","Low (1)","Low (1)","Low (1)"
+"GeForce GTX 1080 (0)","findK",1,"special_fu_utilization","Special Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 (0)","findK",1,"tex_fu_utilization","Texture Function Unit Utilization","Low (2)","Low (2)","Low (2)"
+"GeForce GTX 1080 (0)","findK",1,"single_precision_fu_utilization","Single-Precision Function Unit Utilization","Low (3)","Low (3)","Low (3)"
+"GeForce GTX 1080 (0)","findK",1,"double_precision_fu_utilization","Double-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 (0)","findK",1,"flop_hp_efficiency","FLOP Efficiency(Peak Half)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 (0)","findK",1,"flop_sp_efficiency","FLOP Efficiency(Peak Single)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 (0)","findK",1,"flop_dp_efficiency","FLOP Efficiency(Peak Double)",0.000000%,0.000000%,0.000000%
+"GeForce GTX 1080 (0)","findK",1,"dram_read_transactions","Device Memory Read Transactions",304424,304424,304424
+"GeForce GTX 1080 (0)","findK",1,"dram_write_transactions","Device Memory Write Transactions",35726,35726,35726
+"GeForce GTX 1080 (0)","findK",1,"dram_read_throughput","Device Memory Read Throughput",28.416431GB/s,28.416431GB/s,28.415583GB/s
+"GeForce GTX 1080 (0)","findK",1,"dram_write_throughput","Device Memory Write Throughput",3.334840GB/s,3.334840GB/s,3.334135GB/s
+"GeForce GTX 1080 (0)","findK",1,"dram_utilization","Device Memory Utilization","Low (2)","Low (2)","Low (2)"
+"GeForce GTX 1080 (0)","findK",1,"half_precision_fu_utilization","Half-Precision Function Unit Utilization","Idle (0)","Idle (0)","Idle (0)"
+"GeForce GTX 1080 (0)","findK",1,"ecc_transactions","ECC Transactions",0,0,0
+"GeForce GTX 1080 (0)","findK",1,"ecc_throughput","ECC Throughput",0.000000B/s,0.000000B/s,0.000000B/s

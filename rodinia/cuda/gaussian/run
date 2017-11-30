@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -ue
+
+# ./gaussian -f ../../data/gaussian/matrix4.txt
+./gaussian -s 16
+nvprof ./gaussian -s 16
+nvprof --print-gpu-trace ./gaussian -s 16

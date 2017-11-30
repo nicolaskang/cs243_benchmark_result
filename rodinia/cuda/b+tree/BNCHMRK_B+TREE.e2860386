@@ -1,0 +1,116 @@
+
+cuda/8.0 : CUDA compiler and related CUDA programs
+
+
+cudnn/6.0 : Deep neural network library for cuda 7.5 or greater
+
+==10305== NVPROF is profiling process 10305, command: ./b+tree file ../../data/b+tree/mil.txt command ../../data/b+tree/command.txt
+==10305== Warning: Unified Memory Profiling is not supported on devices of compute capability less than 3.0
+==10305== Profiling application: ./b+tree file ../../data/b+tree/mil.txt command ../../data/b+tree/command.txt
+==10305== Profiling result:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 86.49%  9.3691ms        15  624.61us  4.1920us  4.1008ms  [CUDA memcpy HtoD]
+  6.75%  731.47us         1  731.47us  731.47us  731.47us  findK
+  6.46%  699.80us         1  699.80us  699.80us  699.80us  findRangeK
+  0.29%  31.647us         3  10.549us  9.3110us  12.768us  [CUDA memcpy DtoH]
+
+==10305== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 90.61%  171.46ms         4  42.865ms  9.3940us  170.01ms  cudaThreadSynchronize
+  5.72%  10.822ms        18  601.21us  22.972us  4.4452ms  cudaMemcpy
+  1.57%  2.9764ms       364  8.1760us     213ns  340.75us  cuDeviceGetAttribute
+  0.79%  1.4944ms        15  99.626us  7.5250us  269.41us  cudaMalloc
+  0.76%  1.4297ms        15  95.315us  6.2710us  307.54us  cudaFree
+  0.33%  623.62us         4  155.90us  150.88us  162.21us  cuDeviceTotalMem
+  0.15%  290.81us         4  72.703us  65.969us  88.803us  cuDeviceGetName
+  0.04%  80.583us         2  40.291us  37.377us  43.206us  cudaLaunch
+  0.01%  18.956us        35     541ns     285ns  1.7260us  cudaGetLastError
+  0.01%  14.013us         1  14.013us  14.013us  14.013us  cudaSetDevice
+  0.01%  10.267us        19     540ns     202ns  4.6940us  cudaSetupArgument
+  0.00%  6.2040us        12     517ns     210ns  1.3880us  cuDeviceGet
+  0.00%  3.9870us         3  1.3290us     292ns  2.7770us  cuDeviceGetCount
+  0.00%  3.2610us         2  1.6300us     821ns  2.4400us  cudaConfigureCall
+==10324== NVPROF is profiling process 10324, command: ./b+tree file ../../data/b+tree/mil.txt command ../../data/b+tree/command.txt
+==10324== Warning: Unified Memory Profiling is not supported on devices of compute capability less than 3.0
+==10324== Profiling application: ./b+tree file ../../data/b+tree/mil.txt command ../../data/b+tree/command.txt
+==10324== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput           Device   Context    Stream  Name
+2.18626s  4.7390ms                    -               -         -         -         -  15.529MB  3.2001GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.19104s  10.816us                    -               -         -         -         -  46.875KB  4.1331GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.19108s  9.0240us                    -               -         -         -         -  46.875KB  4.9538GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.19112s  9.1200us                    -               -         -         -         -  46.875KB  4.9017GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.19116s  9.1520us                    -               -         -         -         -  46.875KB  4.8846GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.19119s  4.2240us                    -               -         -         -         -  23.438KB  5.2916GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.19122s  4.1600us                    -               -         -         -         -  23.438KB  5.3730GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.19125s  4.1920us                    -               -         -         -         -  23.438KB  5.3320GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.19127s  4.1280us                    -               -         -         -         -  23.438KB  5.4147GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.19133s  700.41us           (6000 1 1)       (256 1 1)        24        0B        0B         -           -  Tesla M2090 (0)         1         7  findRangeK [438]
+2.19208s  9.5680us                    -               -         -         -         -  23.438KB  2.3361GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+2.19214s  9.5360us                    -               -         -         -         -  23.438KB  2.3439GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+2.21311s  1.2850ms                    -               -         -         -         -  3.8147MB  2.8991GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.21473s  4.7097ms                    -               -         -         -         -  15.529MB  3.2200GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.21948s  17.888us                    -               -         -         -         -  78.125KB  4.1651GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.21954s  19.487us                    -               -         -         -         -  78.125KB  3.8234GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.21959s  9.3440us                    -               -         -         -         -  39.063KB  3.9868GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.21963s  7.4560us                    -               -         -         -         -  39.063KB  4.9964GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.21967s  731.38us          (10000 1 1)       (256 1 1)        19        0B        0B         -           -  Tesla M2090 (0)         1         7  findK [488]
+2.22045s  12.768us                    -               -         -         -         -  39.063KB  2.9177GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.
+==10369== NVPROF is profiling process 10369, command: ./b+tree file ../../data/b+tree/mil.txt command ../../data/b+tree/command.txt
+==10369== Warning: Unified Memory Profiling is not supported on devices of compute capability less than 3.0
+==10369== Profiling application: ./b+tree file ../../data/b+tree/mil.txt command ../../data/b+tree/command.txt
+==10369== Profiling result:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 86.54%  9.4275ms        15  628.50us  4.1590us  4.4104ms  [CUDA memcpy HtoD]
+  6.73%  733.37us         1  733.37us  733.37us  733.37us  findK
+  6.44%  701.19us         1  701.19us  701.19us  701.19us  findRangeK
+  0.29%  31.327us         3  10.442us  9.2800us  12.736us  [CUDA memcpy DtoH]
+
+==10369== API calls:
+Time(%)      Time     Calls       Avg       Min       Max  Name
+ 88.44%  136.02ms         4  34.006ms  10.358us  134.57ms  cudaThreadSynchronize
+  7.05%  10.840ms        18  602.25us  22.723us  4.7356ms  cudaMemcpy
+  1.87%  2.8788ms       364  7.9080us     184ns  324.08us  cuDeviceGetAttribute
+  1.01%  1.5566ms        15  103.77us  8.7420us  268.95us  cudaMalloc
+  0.95%  1.4614ms        15  97.425us  6.6950us  292.93us  cudaFree
+  0.40%  612.84us         4  153.21us  146.15us  160.39us  cuDeviceTotalMem
+  0.19%  285.50us         4  71.374us  64.934us  86.730us  cuDeviceGetName
+  0.06%  86.891us         2  43.445us  39.365us  47.526us  cudaLaunch
+  0.01%  21.605us        35     617ns     310ns  1.5520us  cudaGetLastError
+  0.01%  17.886us        19     941ns     223ns  7.2330us  cudaSetupArgument
+  0.01%  12.779us         1  12.779us  12.779us  12.779us  cudaSetDevice
+  0.00%  5.5610us        12     463ns     188ns  1.0680us  cuDeviceGet
+  0.00%  3.7510us         3  1.2500us     311ns  2.6460us  cuDeviceGetCount
+  0.00%  3.5830us         2  1.7910us  1.1000us  2.4830us  cudaConfigureCall
+==10388== NVPROF is profiling process 10388, command: ./b+tree file ../../data/b+tree/mil.txt command ../../data/b+tree/command.txt
+==10388== Warning: Unified Memory Profiling is not supported on devices of compute capability less than 3.0
+==10388== Profiling application: ./b+tree file ../../data/b+tree/mil.txt command ../../data/b+tree/command.txt
+==10388== Profiling result:
+   Start  Duration            Grid Size      Block Size     Regs*    SSMem*    DSMem*      Size  Throughput           Device   Context    Stream  Name
+2.36271s  4.5616ms                    -               -         -         -         -  15.529MB  3.3245GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.36731s  10.527us                    -               -         -         -         -  46.875KB  4.2466GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.36735s  9.0240us                    -               -         -         -         -  46.875KB  4.9538GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.36739s  9.1200us                    -               -         -         -         -  46.875KB  4.9017GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.36742s  9.1840us                    -               -         -         -         -  46.875KB  4.8675GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.36746s  4.2240us                    -               -         -         -         -  23.438KB  5.2916GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.36748s  4.1600us                    -               -         -         -         -  23.438KB  5.3730GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.36751s  4.1600us                    -               -         -         -         -  23.438KB  5.3730GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.36753s  4.1600us                    -               -         -         -         -  23.438KB  5.3730GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.36760s  701.91us           (6000 1 1)       (256 1 1)        24        0B        0B         -           -  Tesla M2090 (0)         1         7  findRangeK [438]
+2.36836s  9.1520us                    -               -         -         -         -  23.438KB  2.4423GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+2.36840s  9.0880us                    -               -         -         -         -  23.438KB  2.4595GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+2.37598s  1.1382ms                    -               -         -         -         -  3.8147MB  3.2729GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.37742s  4.3670ms                    -               -         -         -         -  15.529MB  3.4726GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.38184s  19.391us                    -               -         -         -         -  78.125KB  3.8423GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.38189s  18.175us                    -               -         -         -         -  78.125KB  4.0994GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.38194s  9.2160us                    -               -         -         -         -  39.063KB  4.0422GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.38198s  7.4550us                    -               -         -         -         -  39.063KB  4.9970GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy HtoD]
+2.38202s  732.43us          (10000 1 1)       (256 1 1)        19        0B        0B         -           -  Tesla M2090 (0)         1         7  findK [488]
+2.38281s  12.735us                    -               -         -         -         -  39.063KB  2.9252GB/s  Tesla M2090 (0)         1         7  [CUDA memcpy DtoH]
+
+Regs: Number of registers used per CUDA thread. This number includes registers used internally by the CUDA driver and/or tools and can be more than what the compiler shows.
+SSMem: Static shared memory allocated per CUDA block.
+DSMem: Dynamic shared memory allocated per CUDA block.

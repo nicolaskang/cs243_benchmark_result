@@ -1,0 +1,318 @@
+Script began: Sun Nov 12 22:26:00 PST 2017
+Node: compute-1-14.local
+
+Current directory:/data/users/zhizhonk/rodinia/cuda/b+tree
+
+Current GPU:Sun Nov 12 22:26:09 2017       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 384.66                 Driver Version: 384.66                    |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla M2090         Off  | 00000000:04:00.0 Off |                    0 |
+| N/A   N/A    P0    75W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla M2090         Off  | 00000000:05:00.0 Off |                    0 |
+| N/A   N/A    P0    76W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla M2090         Off  | 00000000:83:00.0 Off |                    0 |
+| N/A   N/A    P0    75W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla M2090         Off  | 00000000:84:00.0 Off |                    0 |
+| N/A   N/A    P0    75W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID  Type  Process name                               Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+
+running b+tree
+*** Trial 1 ***
+Selecting device 0
+Input File: ../../data/b+tree/mil.txt 
+Command File: ../../data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+Getting input from file ../../data/b+tree/mil.txt...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.690976
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+Time spent in different stages of GPU_CUDA KERNEL:
+ 0.091072998941 s, 93.124534606934 % : GPU: SET DEVICE / DRIVER INIT
+ 0.000502999988 s,  0.514330744743 % : GPU MEM: ALO
+ 0.004887000192 s,  4.997085571289 % : GPU MEM: COPY IN
+ 0.000745999976 s,  0.762804627419 % : GPU: KERNEL
+ 0.000071000002 s,  0.072599366307 % : GPU MEM: COPY OUT
+ 0.000516999979 s,  0.528646051884 % : GPU MEM: FRE
+Total time:
+0.097796998918 s
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+Time spent in different stages of GPU_CUDA KERNEL:
+ 0.000009000000 s,  0.107244998217 % : GPU: SET DEVICE / DRIVER INIT
+ 0.000918000005 s, 10.938989639282 % : GPU MEM: ALO
+ 0.005882000085 s, 70.090560913086 % : GPU MEM: COPY IN
+ 0.000699000026 s,  8.329360961914 % : GPU: KERNEL
+ 0.000045000001 s,  0.536224961281 % : GPU MEM: COPY OUT
+ 0.000838999986 s,  9.997616767883 % : GPU MEM: FRE
+Total time:
+0.008391999640 s
+> > > > > > > > 
+Selecting device 0
+Input File: ../../data/b+tree/mil.txt 
+Command File: ../../data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+Getting input from file ../../data/b+tree/mil.txt...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.700419
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+Time spent in different stages of GPU_CUDA KERNEL:
+ 0.170029997826 s, 96.216529846191 % : GPU: SET DEVICE / DRIVER INIT
+ 0.000571999990 s,  0.323683172464 % : GPU MEM: ALO
+ 0.004687000066 s,  2.652278184891 % : GPU MEM: COPY IN
+ 0.000768999977 s,  0.435161501169 % : GPU: KERNEL
+ 0.000096999996 s,  0.054890330881 % : GPU MEM: COPY OUT
+ 0.000561000023 s,  0.317458540201 % : GPU MEM: FRE
+Total time:
+0.176715999842 s
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+Time spent in different stages of GPU_CUDA KERNEL:
+ 0.000014000000 s,  0.160864070058 % : GPU: SET DEVICE / DRIVER INIT
+ 0.000951000024 s, 10.927267074585 % : GPU MEM: ALO
+ 0.006006000098 s, 69.010688781738 % : GPU MEM: COPY IN
+ 0.000783999974 s,  9.008388519287 % : GPU: KERNEL
+ 0.000067000001 s,  0.769849479198 % : GPU MEM: COPY OUT
+ 0.000881000014 s, 10.122945785522 % : GPU MEM: FRE
+Total time:
+0.008702999912 s
+> > > > > > > > 
+Selecting device 0
+Input File: ../../data/b+tree/mil.txt 
+Command File: ../../data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+Getting input from file ../../data/b+tree/mil.txt...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.696458
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+Time spent in different stages of GPU_CUDA KERNEL:
+ 0.156553000212 s, 95.499908447266 % : GPU: SET DEVICE / DRIVER INIT
+ 0.000568000018 s,  0.346489340067 % : GPU MEM: ALO
+ 0.005348999985 s,  3.262978076935 % : GPU MEM: COPY IN
+ 0.000792999985 s,  0.483743041754 % : GPU: KERNEL
+ 0.000103999999 s,  0.063441708684 % : GPU MEM: COPY OUT
+ 0.000562999980 s,  0.343439251184 % : GPU MEM: FRE
+Total time:
+0.163929998875 s
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+Time spent in different stages of GPU_CUDA KERNEL:
+ 0.000015000000 s,  0.154782786965 % : GPU: SET DEVICE / DRIVER INIT
+ 0.000956000003 s,  9.864822387695 % : GPU MEM: ALO
+ 0.006965999957 s, 71.881126403809 % : GPU MEM: COPY IN
+ 0.000803000003 s,  8.286038398743 % : GPU: KERNEL
+ 0.000059000002 s,  0.608812332153 % : GPU MEM: COPY OUT
+ 0.000891999982 s,  9.204416275024 % : GPU MEM: FRE
+Total time:
+0.009690999985 s
+> > > > > > > > 
+Current GPU:Sun Nov 12 22:26:54 2017       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 384.66                 Driver Version: 384.66                    |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla M2090         Off  | 00000000:04:00.0 Off |                    0 |
+| N/A   N/A    P0    76W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla M2090         Off  | 00000000:05:00.0 Off |                    0 |
+| N/A   N/A    P0    77W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla M2090         Off  | 00000000:83:00.0 Off |                    0 |
+| N/A   N/A    P0    75W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla M2090         Off  | 00000000:84:00.0 Off |                    0 |
+| N/A   N/A    P0    75W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID  Type  Process name                               Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+*** Trial 2 ***
+Selecting device 0
+Input File: ../../data/b+tree/mil.txt 
+Command File: ../../data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+Getting input from file ../../data/b+tree/mil.txt...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.693102
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+Time spent in different stages of GPU_CUDA KERNEL:
+ 0.101372003555 s, 93.903823852539 % : GPU: SET DEVICE / DRIVER INIT
+ 0.000515000022 s,  0.477059453726 % : GPU MEM: ALO
+ 0.004749000072 s,  4.399137020111 % : GPU MEM: COPY IN
+ 0.000719000003 s,  0.666030585766 % : GPU: KERNEL
+ 0.000079999998 s,  0.074106328189 % : GPU MEM: COPY OUT
+ 0.000517999986 s,  0.479838430882 % : GPU MEM: FRE
+Total time:
+0.107952997088 s
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+Time spent in different stages of GPU_CUDA KERNEL:
+ 0.000009000000 s,  0.107758618891 % : GPU: SET DEVICE / DRIVER INIT
+ 0.000915999990 s, 10.967432975769 % : GPU MEM: ALO
+ 0.005824000109 s, 69.731803894043 % : GPU MEM: COPY IN
+ 0.000702999998 s,  8.417145729065 % : GPU: KERNEL
+ 0.000056000001 s,  0.670498073101 % : GPU MEM: COPY OUT
+ 0.000844000024 s, 10.105363845825 % : GPU MEM: FRE
+Total time:
+0.008352000266 s
+> > > > > > > > 
+Selecting device 0
+Input File: ../../data/b+tree/mil.txt 
+Command File: ../../data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+Getting input from file ../../data/b+tree/mil.txt...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.693185
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+Time spent in different stages of GPU_CUDA KERNEL:
+ 0.134590998292 s, 95.388992309570 % : GPU: SET DEVICE / DRIVER INIT
+ 0.000592000026 s,  0.419569522142 % : GPU MEM: ALO
+ 0.004486000165 s,  3.179373264313 % : GPU MEM: COPY IN
+ 0.000783000025 s,  0.554937422276 % : GPU: KERNEL
+ 0.000093000002 s,  0.065912105143 % : GPU MEM: COPY OUT
+ 0.000552000012 s,  0.391220211983 % : GPU MEM: FRE
+Total time:
+0.141096994281 s
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+Time spent in different stages of GPU_CUDA KERNEL:
+ 0.000016000000 s,  0.177403256297 % : GPU: SET DEVICE / DRIVER INIT
+ 0.000995000009 s, 11.032265663147 % : GPU MEM: ALO
+ 0.006209999789 s, 68.854644775391 % : GPU MEM: COPY IN
+ 0.000786999997 s,  8.726022720337 % : GPU: KERNEL
+ 0.000090000001 s,  0.997893333435 % : GPU MEM: COPY OUT
+ 0.000921000028 s, 10.211775779724 % : GPU MEM: FRE
+Total time:
+0.009019000456 s
+> > > > > > > > 
+Selecting device 0
+Input File: ../../data/b+tree/mil.txt 
+Command File: ../../data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+Getting input from file ../../data/b+tree/mil.txt...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.705300
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+Time spent in different stages of GPU_CUDA KERNEL:
+ 0.140318006277 s, 95.072189331055 % : GPU: SET DEVICE / DRIVER INIT
+ 0.000612000003 s,  0.414659410715 % : GPU MEM: ALO
+ 0.005200000014 s,  3.523249864578 % : GPU MEM: COPY IN
+ 0.000804000010 s,  0.544748663902 % : GPU: KERNEL
+ 0.000093000002 s,  0.063011966646 % : GPU MEM: COPY OUT
+ 0.000563999987 s,  0.382137119770 % : GPU MEM: FRE
+Total time:
+0.147590994835 s
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+Time spent in different stages of GPU_CUDA KERNEL:
+ 0.000014000000 s,  0.151975691319 % : GPU: SET DEVICE / DRIVER INIT
+ 0.001001999946 s, 10.877117156982 % : GPU MEM: ALO
+ 0.006413999945 s, 69.626579284668 % : GPU MEM: COPY IN
+ 0.000806999975 s,  8.760313034058 % : GPU: KERNEL
+ 0.000058000001 s,  0.629613518715 % : GPU MEM: COPY OUT
+ 0.000916999998 s,  9.954406738281 % : GPU MEM: FRE
+Total time:
+0.009212000296 s
+> > > > > > > > 
+Current GPU:Sun Nov 12 22:27:40 2017       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 384.66                 Driver Version: 384.66                    |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla M2090         Off  | 00000000:04:00.0 Off |                    0 |
+| N/A   N/A    P0    76W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla M2090         Off  | 00000000:05:00.0 Off |                    0 |
+| N/A   N/A    P0    77W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla M2090         Off  | 00000000:83:00.0 Off |                    0 |
+| N/A   N/A    P0    75W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla M2090         Off  | 00000000:84:00.0 Off |                    0 |
+| N/A   N/A    P0    74W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID  Type  Process name                               Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+=== done! ===

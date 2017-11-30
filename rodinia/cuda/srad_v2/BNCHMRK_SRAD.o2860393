@@ -1,0 +1,114 @@
+Script began: Sun Nov 12 22:32:59 PST 2017
+Node: compute-1-14.local
+
+Current directory:/data/users/zhizhonk/rodinia/cuda/srad_v2
+
+Current GPU:Sun Nov 12 22:33:09 2017       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 384.66                 Driver Version: 384.66                    |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla M2090         Off  | 00000000:04:00.0 Off |                    0 |
+| N/A   N/A    P0    75W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla M2090         Off  | 00000000:05:00.0 Off |                    0 |
+| N/A   N/A    P0    76W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla M2090         Off  | 00000000:83:00.0 Off |                    0 |
+| N/A   N/A    P0    75W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla M2090         Off  | 00000000:84:00.0 Off |                    0 |
+| N/A   N/A    P0    74W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID  Type  Process name                               Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+
+running b+tree
+*** Trial 1 ***
+WG size of kernel = 16 X 16
+Randomizing the input matrix
+Start the SRAD main loop
+Computation Done
+WG size of kernel = 16 X 16
+Randomizing the input matrix
+Start the SRAD main loop
+Computation Done
+WG size of kernel = 16 X 16
+Randomizing the input matrix
+Start the SRAD main loop
+Computation Done
+Current GPU:Sun Nov 12 22:33:48 2017       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 384.66                 Driver Version: 384.66                    |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla M2090         Off  | 00000000:04:00.0 Off |                    0 |
+| N/A   N/A    P0    75W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla M2090         Off  | 00000000:05:00.0 Off |                    0 |
+| N/A   N/A    P0    77W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla M2090         Off  | 00000000:83:00.0 Off |                    0 |
+| N/A   N/A    P0    76W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla M2090         Off  | 00000000:84:00.0 Off |                    0 |
+| N/A   N/A    P0    75W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID  Type  Process name                               Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+*** Trial 2 ***
+WG size of kernel = 16 X 16
+Randomizing the input matrix
+Start the SRAD main loop
+Computation Done
+WG size of kernel = 16 X 16
+Randomizing the input matrix
+Start the SRAD main loop
+Computation Done
+WG size of kernel = 16 X 16
+Randomizing the input matrix
+Start the SRAD main loop
+Computation Done
+Current GPU:Sun Nov 12 22:34:28 2017       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 384.66                 Driver Version: 384.66                    |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla M2090         Off  | 00000000:04:00.0 Off |                    0 |
+| N/A   N/A    P0    77W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla M2090         Off  | 00000000:05:00.0 Off |                    0 |
+| N/A   N/A    P0    77W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla M2090         Off  | 00000000:83:00.0 Off |                    0 |
+| N/A   N/A    P0    75W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla M2090         Off  | 00000000:84:00.0 Off |                    0 |
+| N/A   N/A    P0    74W /  N/A |      0MiB /  5301MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID  Type  Process name                               Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+=== done! ===
